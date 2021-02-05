@@ -9,7 +9,7 @@ public class SpriteImporter : AssetPostprocessor
         var assetToProcess = (TextureImporter) assetImporter;
 
         assetToProcess.filterMode = FilterMode.Point;
-        
+        assetToProcess.maxTextureSize = 1024;
         assetToProcess.SaveAndReimport();
     }
 }
