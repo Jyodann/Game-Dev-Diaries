@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59bc4445e17445849a6565d4a67e4443, type: 3}
   m_Name: Hello
   m_EditorClassIdentifier: 
-  speakerLeft: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
-  speakerRight: {fileID: 11400000, guid: 831f7e246e38c5d48b33fe391c5cfbc9, type: 2}
   lines:
   - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
     text: "What's poppin?\t\t"
@@ -25,3 +23,11 @@ MonoBehaviour:
     text: haha
   - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
     text: kill me
+  - Character: {fileID: 11400000, guid: e2f58341142a7ea4b9f2442bcd5faf49, type: 2}
+    text: 'Jordan... Ive been meaning to ask you... do you think you are funny? Like
+      do you actually think you are funny? Like legit do you actually think you are
+      funny? '
+  - Character: {fileID: 11400000, guid: 831f7e246e38c5d48b33fe391c5cfbc9, type: 2}
+    text: Ew
+  - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
+    text: I love you too!

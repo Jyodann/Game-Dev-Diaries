@@ -7,4 +7,5 @@ public class Character : ScriptableObject
 {
     public string characterName;
     public Sprite portrait;
+    public bool isOtherSpeaker = true;
 }
