@@ -75,6 +75,7 @@ public class DialogManager : MonoBehaviour
             leftSpeaker.SetLines(currentConversation.lines[convoIdx]);
         }
         convoIdx++;
+        
     }
 
     // Update is called once per frame

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuScript : MonoBehaviour
@@ -43,6 +44,8 @@ public class MainMenuScript : MonoBehaviour
 
     public void StartGame()
     {
-        
+        GameManager.Instance.PlayerName = nameInput.text;
+        GameManager.Instance.isPlayerFemale = femaleToggle.isOn;
+        SceneManager.LoadScene(1);
     }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Joey
   m_EditorClassIdentifier: 
   characterName: Joey
-  portrait: {fileID: 21300000, guid: ac69b1ee134cbc44192995d8d225f9f9, type: 3}
+  portrait: {fileID: 68167681262868801, guid: b176aa9af3934974abae5f1ecd2ea627, type: 3}
   isOtherSpeaker: 1

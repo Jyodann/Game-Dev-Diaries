@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Friend1
   m_EditorClassIdentifier: 
   characterName: Uwais
-  portrait: {fileID: 21300000, guid: ac3d13d36bfe3014a86c264b166e890a, type: 3}
+  portrait: {fileID: -5719980801006804753, guid: b176aa9af3934974abae5f1ecd2ea627, type: 3}
+  isOtherSpeaker: 1

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   characterName: Jordan
-  portrait: {fileID: 21300000, guid: e9ab0a758783bc04c8d78f53e63b06b2, type: 3}
+  portrait: {fileID: -2231720224329544501, guid: b176aa9af3934974abae5f1ecd2ea627, type: 3}
   isOtherSpeaker: 0
