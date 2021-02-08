@@ -44,6 +44,9 @@ TextureImporter:
   - first:
       213: -3930158025450333710
     second: PlayerPortraits_6
+  - first:
+      213: -8960722870016323254
+    second: PlayerPortraits_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -188,8 +191,8 @@ TextureImporter:
       name: PlayerPortraits_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
+        x: 80
+        y: 360
         width: 40
         height: 40
       alignment: 0
@@ -209,7 +212,7 @@ TextureImporter:
       name: PlayerPortraits_3
       rect:
         serializedVersion: 2
-        x: 40
+        x: 0
         y: 320
         width: 40
         height: 40
@@ -230,8 +233,8 @@ TextureImporter:
       name: PlayerPortraits_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 280
+        x: 40
+        y: 320
         width: 40
         height: 40
       alignment: 0
@@ -251,7 +254,7 @@ TextureImporter:
       name: PlayerPortraits_5
       rect:
         serializedVersion: 2
-        x: 40
+        x: 0
         y: 280
         width: 40
         height: 40
@@ -272,7 +275,7 @@ TextureImporter:
       name: PlayerPortraits_6
       rect:
         serializedVersion: 2
-        x: 80
+        x: 40
         y: 280
         width: 40
         height: 40
@@ -285,6 +288,27 @@ TextureImporter:
       bones: []
       spriteID: 2f9d1e549164579c0800000000000000
       internalID: -3930158025450333710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPortraits_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 280
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4155f1960e15a380800000000000000
+      internalID: -8960722870016323254
       vertices: []
       indices: 
       edges: []

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bc4445e17445849a6565d4a67e4443, type: 3}
+  m_Name: Introduction
+  m_EditorClassIdentifier: 
+  lines:
+  - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
+    text: I graduated a few weeks ago, college was a hot mess.
+  - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
+    text: Honestly, I kind of just want to achieve sucess like those Indie developers.
+  - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
+    text: With the tools that we have now, that can't be too hard ... right?
+  - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
+    text: Well... only one way to find out.

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Tutorial
   m_EditorClassIdentifier: 
   lines:
-  - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
-    text: Hello!
-  - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
-    text: Welcome to my development journey!
-  - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
-    text: Honestly, I have no idea where to start, but I've been really interested
-      in what Indies can do these days...
-  - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
-    text: So, why not try it together!
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: Hi! I'm tutorial fairy.
+  - Character: {fileID: 0}
+    text: I'll be flying around and giving you small tips along the way
+  - Character: {fileID: 0}
+    text: To start, why don't you explore the map? You can click on various locations
+      to start your journey!
+  - Character: {fileID: 0}
+    text: Let's try clicking on your house to go home!

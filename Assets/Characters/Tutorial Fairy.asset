@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc6e869001eafa8498dd74ea2e1d6ab5, type: 3}
-  m_Name: Player
+  m_Name: Tutorial Fairy
   m_EditorClassIdentifier: 
-  characterName: 
-  portrait: {fileID: 0}
-  isOtherSpeaker: 0
+  characterName: Tutorial Fairy
+  portrait: {fileID: -5719980801006804753, guid: b176aa9af3934974abae5f1ecd2ea627, type: 3}
+  isOtherSpeaker: 1

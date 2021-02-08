@@ -14,9 +14,16 @@ public class SpeakerUI : MonoBehaviour
 
     public void SetLines(CharacterLines characterLine)
     {
+        var gameStaticData = GameStaticData.Instance;
         speakerImage.sprite = characterLine.Character.portrait;
         speakerName.text = characterLine.Character.characterName;
         speakerText.text = string.Empty;
+
+        if (!characterLine.Character.portrait)
+        {
+            speakerImage.sprite = GameDynamicData.Instance.isPlayerFemale ? gameStaticData.characterPortraits[1] : gameStaticData.characterPortraits[0];
+            speakerName.text = GameDynamicData.Instance.PlayerName;
+        }
         StartCoroutine(Type(characterLine.text));
     }
 

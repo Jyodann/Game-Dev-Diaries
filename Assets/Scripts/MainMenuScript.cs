@@ -44,8 +44,9 @@ public class MainMenuScript : MonoBehaviour
 
     public void StartGame()
     {
-        GameManager.Instance.PlayerName = nameInput.text;
-        GameManager.Instance.isPlayerFemale = femaleToggle.isOn;
+        GameDynamicData.Instance.PlayerName = nameInput.text;
+        GameDynamicData.Instance.isPlayerFemale = femaleToggle.isOn;
+        GameDynamicData.Instance.isNewGame = true;
         SceneManager.LoadScene(1);
     }
 }
