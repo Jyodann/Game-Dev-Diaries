@@ -1,19 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlanningStageHUD : MonoBehaviour
 {
+    [SerializeField] private TMP_InputField gameNameInputField;
     [SerializeField] private Button[] uiButtons;
     // Start is called before the first frame update
     private int selectedButtonId = 0;
-
+    [SerializeField] private TextAsset nouns;
+    [SerializeField] private TextAsset adjectives;
     public readonly string[] Titles = { "Choose a topic", "Choose a genre", "Choose a platform", "Choose a target gender", "Choose a target age rating:"};
+    private string[] nounList;
+    private string[] adjectiveList;
+
+
     void Start()
     {
-        
+        nounList = nouns.text.Split('\n');
+        adjectiveList = adjectives.text.Split('\n');
+    }
+
+    public void RandomiseTitle()
+    {
+        TextInfo myTI = new CultureInfo("en-US",false).TextInfo;
+        gameNameInputField.text =
+            myTI.ToTitleCase( $"{adjectiveList[Random.Range(0, adjectiveList.Length)]} {nounList[Random.Range(0, nounList.Length)]}");
     }
 
     // Update is called once per frame
