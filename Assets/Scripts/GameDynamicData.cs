@@ -14,7 +14,7 @@ public class GameDynamicData {
         }
     }
 
-    public string PlayerName = String.Empty;
+    public string PlayerName = string.Empty;
     public bool isPlayerFemale = true;
     public int currentLevel = 1;
     public int currentExp = 0;
