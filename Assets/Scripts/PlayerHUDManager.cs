@@ -15,8 +15,8 @@ public class PlayerHUDManager : MonoBehaviour
     {
         var gameStaticData = GameStaticData.Instance;
         nameText.text = GameDynamicData.Instance.PlayerName;
-        levelText.text = $"Level {GameDynamicData.Instance.currentLevel}";
-        playerPortrait.sprite = GameDynamicData.Instance.isPlayerFemale ? gameStaticData.characterPortraits[1] : gameStaticData.characterPortraits[0];
+        levelText.text = $"Level {GameDynamicData.Instance.CurrentLevel}";
+        playerPortrait.sprite = GameDynamicData.Instance.IsPlayerFemale ? gameStaticData.characterPortraits[1] : gameStaticData.characterPortraits[0];
     }
 
     // Update is called once per frame

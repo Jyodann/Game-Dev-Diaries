@@ -23,7 +23,7 @@ public class DialogManager : MonoBehaviour
 
     [SerializeField]private Conversation currentConversation;
     private Character currentCharacter;
-    private int convoIdx = 0;
+    private int convoIdx = -1;
     public float typingSpeed = 0.05f;
     private void Awake()
     {
@@ -55,6 +55,10 @@ public class DialogManager : MonoBehaviour
 
     public void ContinueConversation()
     {
+        if (convoIdx == -1)
+        {
+            return;
+        }
         if (convoIdx > currentConversation.lines.Length - 1)
         {
             rightSpeaker.HideDialogBox();
@@ -65,6 +69,7 @@ public class DialogManager : MonoBehaviour
                 if (OnEndConversation != null)
                 {
                     OnEndConversation();
+                    convoIdx = -1;
                 }
             }
             else
@@ -109,11 +114,6 @@ public class DialogManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A ))
-        {
-            StartConversation(currentConversation);
-        }
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ContinueConversation();

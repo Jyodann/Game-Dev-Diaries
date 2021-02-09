@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,17 +14,17 @@ public class GameManager : MonoBehaviour
         if (developerMode)
         {
             GameDynamicData.Instance.PlayerName = developerName;
-            GameDynamicData.Instance.isPlayerFemale = isFemale;
-            GameDynamicData.Instance.isNewGame = isNewGame;
+            GameDynamicData.Instance.IsPlayerFemale = isFemale;
+            GameDynamicData.Instance.IsNewGame = isNewGame;
         }
         
-        if (GameDynamicData.Instance.isNewGame)
+        if (GameDynamicData.Instance.IsNewGame)
         {
             DialogManager.Instance.FindAndStartConversation("Introduction");
 
             DialogManager.Instance.FindQueueConversation("Tutorial");
         }
-
+        
         ChooserMenu.OnButtonFinish += ChooserMenuOnOnButtonFinish;
     }
 
@@ -36,6 +37,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+           
+        }
     }
 }

@@ -9,6 +9,9 @@ public class GameStaticData : MonoBehaviour
     public List<Conversation> Conversations;
     public static GameStaticData Instance;
 
+    public readonly List<string> TargetGenders = new List<string>() {"Male", "Female", "General"};
+    public readonly List<string> TargetAge = new List<string>()  {"Everyone", "Young Adults", "Mature"};
+    
     private void Awake()
     {
         if (Instance == null)
