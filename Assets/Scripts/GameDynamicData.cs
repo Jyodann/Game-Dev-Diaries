@@ -24,4 +24,10 @@ public class GameDynamicData {
     public List<string> CurrentUserTopics = new List<string>() { "Zombies", "Computers", "School", "Running", "Monsters", "Plants"};
     public List<string> CurrentGenres = new List<string>() { "Platformer", "Simulation", "Action", "Horror", "Romance", "Open World"};
     public List<string> CurrentPlatforms = new List<string>() { "PC", "Mobile" };
+    public Dictionary<ProductionStageHUD.ProductionCycle, int> CurrentProdCyclePoints = new Dictionary<ProductionStageHUD.ProductionCycle, int>()
+    {
+        {ProductionStageHUD.ProductionCycle.Development, 5},
+        {ProductionStageHUD.ProductionCycle.Design, 5},
+        {ProductionStageHUD.ProductionCycle.ArtSound, 5},
+    };
 }

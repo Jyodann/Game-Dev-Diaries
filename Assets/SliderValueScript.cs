@@ -13,7 +13,7 @@ public class SliderValueScript : MonoBehaviour
     private Image sliderColour;
     [HideInInspector] public Slider currentSlider;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         var textComponents = GetComponentsInChildren<TextMeshProUGUI>();
         sliderColour = GetComponentsInChildren<Image>()[1];
@@ -29,6 +29,7 @@ public class SliderValueScript : MonoBehaviour
     public void UpdateValue(float currentValue)
     {
         counter.text = currentValue.ToString("0");
+        ProductionStageHUD.Instance.UpdateTotal();
     }
 
     public void SetSliderValueAndTitle(float value, string title, string colorHex)

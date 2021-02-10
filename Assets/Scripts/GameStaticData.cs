@@ -27,6 +27,14 @@ public class GameStaticData : MonoBehaviour
             {ProductionStageHUD.ProductionCycle.Design, "Production: Design"},
             {ProductionStageHUD.ProductionCycle.ArtSound, "Production: Art/Sound"},
         };
+    
+    public readonly Dictionary<ProductionStageHUD.ProductionCycle, string> ProductionCycleColours =
+        new Dictionary<ProductionStageHUD.ProductionCycle, string>()
+        {
+            {ProductionStageHUD.ProductionCycle.Development, "#68eb94"},
+            {ProductionStageHUD.ProductionCycle.Design, "#f4f46e"},
+            {ProductionStageHUD.ProductionCycle.ArtSound, "#f8b1b1"},
+        };
     private void Awake()
     {
         if (Instance == null)
