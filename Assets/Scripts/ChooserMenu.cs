@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ChooserMenu : MonoBehaviour
 {
     public static ChooserMenu Instance;
+    [SerializeField] private GameObject PlanningHUD;
     [SerializeField] private TextMeshProUGUI topicHeader;
     public delegate void OnButtonChosen(string information);
 
@@ -29,18 +30,18 @@ public class ChooserMenu : MonoBehaviour
 
     private void Start()
     {
-        gameObject.SetActive(false);
+        PlanningHUD.SetActive(false);
     }
 
     public void OpenMenuWithInformation(string menuTitle, List<string> information)
     {
-        gameObject.SetActive(true);
+        PlanningHUD.SetActive(true);
         topicHeader.text = menuTitle;
         foreach (var topic in information)
         {
             var button = Instantiate(genericChooserButton, contentParent.transform).GetComponent<Button>();
             button.GetComponentInChildren<TextMeshProUGUI>().text = topic;
-            button.onClick.AddListener(delegate { OnButtonFinish(topic); DestoryAllChildren(); gameObject.SetActive(false); }); 
+            button.onClick.AddListener(delegate { OnButtonFinish(topic); DestoryAllChildren(); PlanningHUD.SetActive(false); }); 
         }
     }
 
