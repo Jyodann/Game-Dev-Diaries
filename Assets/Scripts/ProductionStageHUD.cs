@@ -18,6 +18,7 @@ public class ProductionStageHUD : MonoBehaviour
     [SerializeField] private TextMeshProUGUI hoursToSpend;
     [SerializeField] private TextMeshProUGUI moneyToSpend;
     [SerializeField] private Button finishProduction;
+    [SerializeField] private Image warningImage;
     public enum ProductionCycle { Development, Design, ArtSound }
 
     private ProductionCycle currentProductionCycle = ProductionCycle.Development;
@@ -132,6 +133,7 @@ public class ProductionStageHUD : MonoBehaviour
     
     public void SaveInformation()
     {
+        warningImage.gameObject.SetActive(false);
         var floatValues = new float[3];
         var values = 0f;
         for (int i = 0; i < _sliderValueScripts.Length; i++)
@@ -139,7 +141,11 @@ public class ProductionStageHUD : MonoBehaviour
             floatValues[i] = _sliderValueScripts[i].GetSliderValue();
             values += _sliderValueScripts[i].GetSliderValue();
         }
-        
+
+        if (values > GameDynamicData.Instance.CurrentProdCyclePoints[currentProductionCycle])
+        {
+            warningImage.gameObject.SetActive(true);
+        }
         currentValues[currentProductionCycle] = floatValues;
     }
 
