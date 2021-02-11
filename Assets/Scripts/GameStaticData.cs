@@ -133,6 +133,7 @@ public class Game
     public GameStaticData.GameStates GameState;
     
     public float TimeToComplete;
+    public float TimeSpent;
     public float HypeScore;
     public float MoneyCost;
     

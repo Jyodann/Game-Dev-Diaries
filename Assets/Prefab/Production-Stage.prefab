@@ -1394,7 +1394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba25b50702dd3f43a1dd65970d5491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUD: {fileID: 1703164396811694341}
+  nextUI: {fileID: 2773374893139244925, guid: 6ba08a4306ef38043a348783b5a87ef0, type: 3}
   previousButton: {fileID: 1703164396205804337}
   nextButton: {fileID: 1703164397850125365}
   _sliderValueScripts:
@@ -1737,6 +1737,34 @@ PrefabInstance:
     - target: {fileID: 5025601191732717410, guid: b922e9244b1fe5d46a5bd7aec8ec8260, type: 3}
       propertyPath: m_Name
       value: Button-Confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025601191732717468, guid: b922e9244b1fe5d46a5bd7aec8ec8260, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025601191732717468, guid: b922e9244b1fe5d46a5bd7aec8ec8260, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025601191732717468, guid: b922e9244b1fe5d46a5bd7aec8ec8260, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1703164397214786282}
+    - target: {fileID: 5025601191732717468, guid: b922e9244b1fe5d46a5bd7aec8ec8260, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025601191732717468, guid: b922e9244b1fe5d46a5bd7aec8ec8260, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextStage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025601191732717468, guid: b922e9244b1fe5d46a5bd7aec8ec8260, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ProductionStageHUD, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025601191732717468, guid: b922e9244b1fe5d46a5bd7aec8ec8260, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5025601191732717469, guid: b922e9244b1fe5d46a5bd7aec8ec8260, type: 3}
       propertyPath: m_Pivot.x

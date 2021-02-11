@@ -7,8 +7,9 @@ using UnityEngine.UI;
 
 public class ProductionStageHUD : MonoBehaviour
 {
+    
     public static ProductionStageHUD Instance;
-    [SerializeField] private GameObject HUD;
+    [SerializeField] private GameObject nextUI;
     [SerializeField] private Button previousButton;
     [SerializeField] private Button nextButton;
     [SerializeField] private SliderValueScript[] _sliderValueScripts;
@@ -29,6 +30,8 @@ public class ProductionStageHUD : MonoBehaviour
     private int currentDevIdx = 0;
     private GameStaticData cacheInstance;
     public bool sliderValueHasChanged = true;
+    private float timeSpent;
+    private float moneySpent;
 
     private void Awake()
     {
@@ -55,11 +58,8 @@ public class ProductionStageHUD : MonoBehaviour
 
     private void Update()
     {
-        if (HUD.activeSelf)
-        {
-            SaveInformation();
-            UpdateTotal();
-        }
+        SaveInformation();
+        UpdateTotal();
     }
 
     public void NextProductCycle()
@@ -130,8 +130,11 @@ public class ProductionStageHUD : MonoBehaviour
                 finishProduction.interactable = false;
             }
         }
-        hoursToSpend.text = $"{Mathf.Clamp(totalPointsUsed * 2f, 2f, Single.MaxValue)} h";
-        moneyToSpend.text = $"{Mathf.Clamp((totalPointsUsed / 5f) * 250f, 50f, Single.MaxValue)}";
+
+        timeSpent = Mathf.Clamp(totalPointsUsed * 2f, 2f, Single.MaxValue);
+        moneySpent = Mathf.Clamp((totalPointsUsed / 5f) * 250f, 50f, Single.MaxValue);
+        hoursToSpend.text = $"{timeSpent} h";
+        moneyToSpend.text = $"{moneySpent}";
     }
     
     public void SaveInformation()
@@ -178,8 +181,19 @@ public class ProductionStageHUD : MonoBehaviour
         UpdateSlideValues();
     }
 
-    public void ShowHUD()
+    public void NextStage()
     {
-        HUD.SetActive(true);
+        var game = GameDynamicData.Instance.currentGame;
+        game.SetDevelopmentScore(currentValues[ProductionCycle.Development]);
+        game.SetArtSoundScore(currentValues[ProductionCycle.ArtSound]);
+        game.SetDesignScore(currentValues[ProductionCycle.Design]);
+        game.MoneyCost = moneySpent;
+        game.HypeScore = 0;
+        game.TimeToComplete = timeSpent;
+        game.GameState = GameStaticData.GameStates.Only_An_Idea;
+        GameDynamicData.Instance.currentGame = game;
+
+        Instantiate(nextUI);
+        Destroy(gameObject);
     }
 }
