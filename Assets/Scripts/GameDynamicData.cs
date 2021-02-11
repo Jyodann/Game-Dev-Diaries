@@ -20,6 +20,8 @@ public class GameDynamicData {
     public int CurrentLevel = 1;
     public int CurrentExp = 0;
     public bool IsNewGame = true;
+    public float CurrentMoney = 10000f;
+    public DateTime currentDateTime = DateTime.Parse("23 Jan 2021 08:00");
     public Game currentGame;
     
     public List<string> CurrentUserTopics = new List<string>() { "Zombies", "Computers", "School", "Running", "Monsters", "Plants"};
