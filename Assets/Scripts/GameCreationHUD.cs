@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -25,8 +25,15 @@ public class GameCreationHUD : MonoBehaviour
     [SerializeField] private TextMeshProUGUI gameStateText;
 
     [SerializeField] private GameObject actionButtons;
+
+    [SerializeField] private GameObject loadingBarPopup;
     // Start is called before the first frame update
     void Start()
+    {
+        RefreshData();
+    }
+
+    private void RefreshData()
     {
         var data = GameStaticData.Instance;
         var game = GameDynamicData.Instance.currentGame;
@@ -42,8 +49,6 @@ public class GameCreationHUD : MonoBehaviour
             case GameStaticData.Genders.Males:
                 genderImage.sprite = genderIcons[2];
                 break;
-            default:
-                throw new ArgumentOutOfRangeException();
         }
 
         switch (game.Age)
@@ -57,8 +62,6 @@ public class GameCreationHUD : MonoBehaviour
             case GameStaticData.Ages.Mature:
                 ageRatingImage.sprite = ageIcons[2];
                 break;
-            default:
-                throw new ArgumentOutOfRangeException();
         }
 
         gameTitleText.text = game.GameName;
@@ -69,7 +72,7 @@ public class GameCreationHUD : MonoBehaviour
         gameHypeText.text = $"{game.HypeScore}%";
         timeSpentText.text = $"{game.TimeSpent}/{game.TimeToComplete}";
         gameStateText.text = ReturnString(data.AvailableGameStates, game.GameState);
-        
+
         print($"Development: {game.ScriptingEngineScore}, {game.PhysicsScore}, {game.AIScore}");
         print($"Design: {game.LevelDesignScore}, {game.GameplayScore}, {game.StoryQuestScore}");
         print($"SoundArt: {game.DialogueScore}, {game.SoundFXScore}, {game.BGMScore}");
@@ -87,12 +90,14 @@ public class GameCreationHUD : MonoBehaviour
 
         return string.Empty;
     }
-    
-    
 
-    // Update is called once per frame
-    void Update()
+    public void WorkOnGame()
     {
-        
+        var bar =Instantiate(loadingBarPopup);
+        bar.GetComponentInChildren<GameCreationInProgressHUD>().startingText = "Coding...";
+
+        var game = GameDynamicData.Instance.currentGame;
+        game.TimeSpent = Mathf.Clamp(game.TimeSpent += 4, 0, game.TimeToComplete);
+        RefreshData();
     }
 }

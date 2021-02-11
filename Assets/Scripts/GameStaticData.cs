@@ -40,7 +40,8 @@ public class GameStaticData : MonoBehaviour
         Alpha_Build_Available, Beta_Build_Available, Game_Done_but_buggy,
         Game_Finished
     }
-    
+
+    public readonly List<string> WorkingText = new List<string>() { "Coding...", "Drawing...", "Eating...", "Drinking Coffee", "Thinking...", "Procrastinating...", "Designing...", "Writing...", "Watching tutorials...", "Browsing Stackoverflow..." };
     
     public Sprite[] characterPortraits;
     public List<Conversation> Conversations;

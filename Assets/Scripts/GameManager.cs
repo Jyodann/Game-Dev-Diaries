@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-           
+            GameDynamicData.Instance.CurrentDateTime = GameDynamicData.Instance.CurrentDateTime.AddDays(7);
         }
     }
 }

@@ -21,7 +21,18 @@ public class GameDynamicData {
     public int CurrentExp = 0;
     public bool IsNewGame = true;
     public float CurrentMoney = 10000f;
-    public DateTime currentDateTime = DateTime.Parse("23 Jan 2021 08:00");
+    
+    private DateTime dateTime = DateTime.Parse("23 Jan 2021 08:00");
+    public DateTime CurrentDateTime
+    {
+        get => dateTime;
+        set
+        {
+            dateTime = value;
+            DateTimeHUD.Instance.UpdateDateTime();
+        }
+    }
+
     public Game currentGame;
     
     public List<string> CurrentUserTopics = new List<string>() { "Zombies", "Computers", "School", "Running", "Monsters", "Plants"};
