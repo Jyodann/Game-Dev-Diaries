@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -49,10 +50,10 @@ public class PlanningStageHUD : MonoBehaviour
                     currentList = GameDynamicData.Instance.CurrentPlatforms;
                     break; 
                 case 3:
-                    currentList = GameStaticData.Instance.TargetGenders;
+                    currentList = GameStaticData.Instance.TargetGenders.Keys.ToList();
                     break;
                 case 4:
-                    currentList = GameStaticData.Instance.TargetAge;
+                    currentList = GameStaticData.Instance.TargetAge.Keys.ToList();
                     break;
             }
 
@@ -84,10 +85,10 @@ public class PlanningStageHUD : MonoBehaviour
                 currentList = GameDynamicData.Instance.CurrentPlatforms;
                 break; 
             case 3:
-                currentList = GameStaticData.Instance.TargetGenders;
+                currentList = GameStaticData.Instance.TargetGenders.Keys.ToList();
                 break;
             case 4:
-                currentList = GameStaticData.Instance.TargetAge;
+                currentList = GameStaticData.Instance.TargetAge.Keys.ToList();
                 break;
         }
         ChooserMenu.Instance.OpenMenuWithInformation(Titles[buttonId], currentList);

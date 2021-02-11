@@ -55,6 +55,7 @@ public class ProductionStageHUD : MonoBehaviour
 
     private void Update()
     {
+ 
         SaveInformation();
         UpdateTotal();
     }
