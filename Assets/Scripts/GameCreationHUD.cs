@@ -76,6 +76,11 @@ public class GameCreationHUD : MonoBehaviour
         print($"Development: {game.ScriptingEngineScore}, {game.PhysicsScore}, {game.AIScore}");
         print($"Design: {game.LevelDesignScore}, {game.GameplayScore}, {game.StoryQuestScore}");
         print($"SoundArt: {game.DialogueScore}, {game.SoundFXScore}, {game.BGMScore}");
+
+        if (game.TimeSpent == game.TimeToComplete)
+        {
+            
+        }
     }
 
     private string ReturnString<T>(IDictionary<string, T> currentDictionary, T lol)

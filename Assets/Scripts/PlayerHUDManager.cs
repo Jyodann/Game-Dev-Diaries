@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -6,10 +7,23 @@ using UnityEngine.UI;
 
 public class PlayerHUDManager : MonoBehaviour
 {
-
+    public static PlayerHUDManager Instance;
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private Image playerPortrait;
     [SerializeField] private TextMeshProUGUI nameText;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +33,5 @@ public class PlayerHUDManager : MonoBehaviour
         playerPortrait.sprite = GameDynamicData.Instance.IsPlayerFemale ? gameStaticData.characterPortraits[1] : gameStaticData.characterPortraits[0];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void ChangeVisibility(bool isVisible) => gameObject.SetActive(isVisible);
 }
