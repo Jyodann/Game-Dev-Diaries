@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class ProductionStageHUD : MonoBehaviour
 {
     public static ProductionStageHUD Instance;
+    [SerializeField] private GameObject HUD;
     [SerializeField] private Button previousButton;
     [SerializeField] private Button nextButton;
     [SerializeField] private SliderValueScript[] _sliderValueScripts;
@@ -50,14 +51,15 @@ public class ProductionStageHUD : MonoBehaviour
         }
         currentProductionCycle = _productionCycles[currentDevIdx];
         previousButton.gameObject.SetActive(false);
-        SaveInformation();
     }
 
     private void Update()
     {
- 
-        SaveInformation();
-        UpdateTotal();
+        if (HUD.activeSelf)
+        {
+            SaveInformation();
+            UpdateTotal();
+        }
     }
 
     public void NextProductCycle()
@@ -174,5 +176,10 @@ public class ProductionStageHUD : MonoBehaviour
         }
 
         UpdateSlideValues();
+    }
+
+    public void ShowHUD()
+    {
+        HUD.SetActive(true);
     }
 }

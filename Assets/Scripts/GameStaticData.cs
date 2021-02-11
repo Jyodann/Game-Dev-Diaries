@@ -29,9 +29,9 @@ public class GameStaticData : MonoBehaviour
     
     public enum Genres
     {
-        Platformer, Shooter, Fighting, Stealth, Survival, Survival_Horror, Text, Visual_Novel,
-        Interactive_Movie, RPG, MMORPG, Rouguelike, Sandbox, Simulation, MOBA, Real_Time_Strategy, First_Person_Shooter,
-        Sports, Puzzle, Education
+        Platformer, Shooter, Fighting, Stealth, Survival, Horror, Text, Visual_Novel,
+        Interactive_Movie, RPG, MMORPG, Romance, Sandbox, Simulation, MOBA, Real_Time_Strategy, First_Person_Shooter,
+        Sports, Puzzle, Action, Open_World
     }
     
     public enum GameStates
@@ -123,6 +123,7 @@ public class GameStaticData : MonoBehaviour
 }
 public class Game
 {
+    
     public string GameName;
     public GameStaticData.Topics Topic;
     public GameStaticData.Genres Genre;

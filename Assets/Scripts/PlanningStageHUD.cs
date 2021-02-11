@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class PlanningStageHUD : MonoBehaviour
 {
+    [SerializeField] private GameObject nextStepUI;
     [SerializeField] private TMP_InputField gameNameInputField;
     [SerializeField] private Button nextButton;
     [SerializeField] private Button[] uiButtons;
@@ -63,12 +64,6 @@ public class PlanningStageHUD : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OpenTopicsButton(int buttonId)
     {
         
@@ -120,5 +115,23 @@ public class PlanningStageHUD : MonoBehaviour
 
         nextButton.interactable = true;
         //Debug.Log();
+    }
+
+    public void MoveToNextStage()
+    {
+        var newGame = new Game
+        {
+            GameName = gameNameInputField.text,
+            Topic = GameStaticData.Instance.TargetTopics[uiButtons[0].GetComponentInChildren<TextMeshProUGUI>().text],
+            Genre = GameStaticData.Instance.TargetGenres[uiButtons[1].GetComponentInChildren<TextMeshProUGUI>().text],
+            Platform = GameStaticData.Instance.TargetPlatforms[uiButtons[2].GetComponentInChildren<TextMeshProUGUI>().text],
+            Gender = GameStaticData.Instance.TargetGenders[uiButtons[3].GetComponentInChildren<TextMeshProUGUI>().text],
+            Age = GameStaticData.Instance.TargetAge[uiButtons[4].GetComponentInChildren<TextMeshProUGUI>().text]
+        };
+
+        GameDynamicData.Instance.currentGame = newGame;
+
+        Instantiate(nextStepUI);
+        Destroy(gameObject);
     }
 }
