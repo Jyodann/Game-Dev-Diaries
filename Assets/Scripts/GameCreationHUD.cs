@@ -25,12 +25,20 @@ public class GameCreationHUD : MonoBehaviour
     [SerializeField] private TextMeshProUGUI gameStateText;
 
     [SerializeField] private GameObject actionButtons;
+    [SerializeField] private GameObject launchGameButton;
+    [SerializeField] private GameObject reviewsScreen;
 
     [SerializeField] private GameObject loadingBarPopup;
     // Start is called before the first frame update
     void Start()
     {
         RefreshData();
+    }
+
+    public void CloseHUD()
+    { 
+        HomeActionsScript.Instance.UpdateTitle();
+        Destroy(gameObject);
     }
 
     private void RefreshData()
@@ -79,8 +87,23 @@ public class GameCreationHUD : MonoBehaviour
 
         if (game.TimeSpent == game.TimeToComplete)
         {
+            foreach (Transform child in actionButtons.transform)
+            {
+                Destroy(child.gameObject);
+            }
+
+            var launchBtn = Instantiate(launchGameButton, actionButtons.transform);
             
+            launchBtn.GetComponent<Button>().onClick.AddListener(delegate { ShowReviewsScreen();} );
         }
+    }
+
+    private void ShowReviewsScreen()
+    {
+        Instantiate(reviewsScreen);
+        GameDynamicData.Instance.CurrentGames.Add(GameDynamicData.Instance.currentGame);
+        GameDynamicData.Instance.currentGame = null;
+        Destroy(gameObject);  
     }
 
     private string ReturnString<T>(IDictionary<string, T> currentDictionary, T lol)
@@ -104,5 +127,12 @@ public class GameCreationHUD : MonoBehaviour
         var game = GameDynamicData.Instance.currentGame;
         game.TimeSpent = Mathf.Clamp(game.TimeSpent += 4, 0, game.TimeToComplete);
         RefreshData();
+    }
+
+    public void AbandonProject()
+    {
+        GameDynamicData.Instance.currentGame = null;
+        HomeActionsScript.Instance.UpdateTitle();
+        Destroy(gameObject);  
     }
 }

@@ -265,6 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03daff484d9f2cc4dafa069c69ffc8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planningPrefab: {fileID: 5285714068903532390, guid: 8310641483f0e6449b49a054536d5429, type: 3}
+  creationPrefab: {fileID: 2773374893139244925, guid: 6ba08a4306ef38043a348783b5a87ef0, type: 3}
   workOnGameButton: {fileID: 468445718859070772}
   researchButton: {fileID: 0}
   backToMap: {fileID: 0}
@@ -599,7 +601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6252313470101484766, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6252313470101484766, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -611,7 +613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6252313470101484766, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenPrefab
+      value: WorkOnGame
       objectReference: {fileID: 0}
     - target: {fileID: 6252313470101484766, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -620,10 +622,10 @@ PrefabInstance:
     - target: {fileID: 6252313470101484766, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 5285714068903532390, guid: 8310641483f0e6449b49a054536d5429, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6252313470101484766, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6252313470533202070, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
       propertyPath: m_AnchorMax.y
