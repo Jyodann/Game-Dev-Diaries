@@ -102,6 +102,7 @@ public class GameCreationHUD : MonoBehaviour
     {
         Instantiate(reviewsScreen);
         GameDynamicData.Instance.CurrentGames.Add(GameDynamicData.Instance.currentGame);
+        
         GameDynamicData.Instance.currentGame = null;
         Destroy(gameObject);  
     }

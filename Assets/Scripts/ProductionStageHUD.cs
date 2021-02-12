@@ -192,7 +192,7 @@ public class ProductionStageHUD : MonoBehaviour
         game.TimeToComplete = timeSpent;
         game.GameState = GameStaticData.GameStates.Only_An_Idea;
         GameDynamicData.Instance.currentGame = game;
-
+        GameDynamicData.Instance.CurrentMoney -= moneySpent;
         Instantiate(nextUI);
         Destroy(gameObject);
     }

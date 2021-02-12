@@ -20,7 +20,17 @@ public class GameDynamicData {
     public int CurrentLevel = 1;
     public int CurrentExp = 0;
     public bool IsNewGame = true;
-    public float CurrentMoney = 10000f;
+    private float _currentMoney = 10000f;
+
+    public float CurrentMoney
+    {
+        get => _currentMoney;
+        set
+        {
+            _currentMoney = value;
+            DateTimeHUD.Instance.UpdateDateTime();
+        }
+    }
     
     private DateTime dateTime = DateTime.Parse("23 Jan 2021 08:00");
     public DateTime CurrentDateTime
@@ -37,7 +47,7 @@ public class GameDynamicData {
     
     public List<string> CurrentUserTopics = new List<string>() { "Zombies", "Computers", "School", "Running", "Monsters", "Plants"};
     public List<string> CurrentGenres = new List<string>() { "Platformer", "Simulation", "Action", "Horror", "Romance", "Open World"};
-    public List<string> CurrentPlatforms = new List<string>() { "PC", "Mobile" };
+    public List<string> CurrentPlatforms = new List<string>() { "PC", "Mobile", "YBox One", "MyStation 4", "Mintendo Swap" };
     public List<Game> CurrentGames = new List<Game>();
     
     public Dictionary<ProductionStageHUD.ProductionCycle, int> CurrentProdCyclePoints = new Dictionary<ProductionStageHUD.ProductionCycle, int>()

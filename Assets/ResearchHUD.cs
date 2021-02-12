@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ResearchHUD : MonoBehaviour
 {
+    [SerializeField] private GameObject researchTimePrefab;
+
+    private GameStaticData.ResearchType currentResearchType;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +24,31 @@ public class ResearchHUD : MonoBehaviour
     public void OpenTopicChooser()
     {
         ChooserMenu.Instance.OpenMenuWithInformation("Choose Topic", GameDynamicData.Instance.CurrentUserTopics);
+        currentResearchType = GameStaticData.ResearchType.Topic;
         ChooserMenu.OnButtonFinish += OnTopicChoose;
     }
     
     public void OpenGenreChooser()
     {
-        ChooserMenu.Instance.OpenMenuWithInformation("Choose genre to research on", GameDynamicData.Instance.CurrentGenres);
+        ChooserMenu.Instance.OpenMenuWithInformation("Choose Genre", GameDynamicData.Instance.CurrentGenres);
+        currentResearchType = GameStaticData.ResearchType.Genre;
+        ChooserMenu.OnButtonFinish += OnTopicChoose;
+    }
+    
+    public void OpenDiscovery()
+    {
+        ChooserMenu.OnButtonFinish -= OnTopicChoose;
+        currentResearchType = GameStaticData.ResearchType.DiscoverGenreTopic;
+        var window = Instantiate(researchTimePrefab).GetComponent<TopicToResearchMenu>();
+        window.topic = "Topic and Genre Discovery";
+        window.currentType = currentResearchType;
     }
 
     private void OnTopicChoose(string topic)
     {
-        
+        ChooserMenu.OnButtonFinish -= OnTopicChoose;
+        var window = Instantiate(researchTimePrefab).GetComponent<TopicToResearchMenu>();
+        window.topic = topic;
+        window.currentType = currentResearchType;
     }
 }

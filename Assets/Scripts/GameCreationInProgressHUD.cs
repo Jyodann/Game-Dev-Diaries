@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class GameCreationInProgressHUD : MonoBehaviour
 {
@@ -13,6 +15,9 @@ public class GameCreationInProgressHUD : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI progressText;
 
+    public delegate void CreationComplete();
+
+    public static event CreationComplete onCreationComplete;
     [SerializeField] private Slider currentSliderProgress;
     // Start is called before the first frame update
     void Start()
@@ -44,5 +49,10 @@ public class GameCreationInProgressHUD : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnDestroy()
+    {
+        onCreationComplete?.Invoke();
     }
 }

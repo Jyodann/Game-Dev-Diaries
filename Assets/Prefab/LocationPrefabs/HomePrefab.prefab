@@ -657,11 +657,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6252313470533202071, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6252313470533202071, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3653968004329908077}
     - target: {fileID: 6252313470533202071, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252313470533202071, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252313470533202071, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HomeActionsScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252313470533202071, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8971534665377402452, guid: ee2d3715558194d78acf9949e1ff15a5, type: 3}
+    - target: {fileID: 6252313470533202071, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3f9599c551c884b872ce5e07a0e627, type: 3}

@@ -40,6 +40,11 @@ public class GameStaticData : MonoBehaviour
         Alpha_Build_Available, Beta_Build_Available, Game_Done_but_buggy,
         Game_Finished
     }
+    
+    public enum ResearchType
+    {
+        Genre, Topic, DiscoverGenreTopic
+    }
 
     public readonly List<string> WorkingText = new List<string>() { "Coding...", "Drawing...", "Eating...", "Drinking Coffee", "Thinking...", "Procrastinating...", "Designing...", "Writing...", "Watching tutorials...", "Browsing Stackoverflow..." };
     
