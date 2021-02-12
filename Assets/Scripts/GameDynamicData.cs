@@ -57,8 +57,6 @@ public class GameDynamicData {
         {ProductionStageHUD.ProductionCycle.ArtSound, 5},
     };
     
-    
-    
 }
 
 

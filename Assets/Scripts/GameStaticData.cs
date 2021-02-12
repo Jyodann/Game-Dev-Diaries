@@ -51,6 +51,7 @@ public class GameStaticData : MonoBehaviour
     public Sprite[] characterPortraits;
     public List<Conversation> Conversations;
     public static GameStaticData Instance;
+    public List<Character> Friends;
 
     public readonly Dictionary<string, Genders> TargetGenders = new Dictionary<string, Genders>();
     public readonly Dictionary<string, Ages> TargetAge = new Dictionary<string, Ages>();
@@ -126,6 +127,8 @@ public class GameStaticData : MonoBehaviour
 
     private static string FormatString(string stringToFormat) => stringToFormat.Replace('_', ' ');
     
+    
+    
 }
 public class Game
 {
@@ -176,4 +179,5 @@ public class Game
         BGMScore = scores[2];
     }
 }
+
 
