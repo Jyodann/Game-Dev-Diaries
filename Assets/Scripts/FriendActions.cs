@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class SchoolActionsScript : MonoBehaviour
+public class FriendActions : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
