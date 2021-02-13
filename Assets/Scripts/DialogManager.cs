@@ -7,8 +7,10 @@ using UnityEngine;
 public class DialogManager : MonoBehaviour
 {
     public delegate void EndConversation();
+    public delegate void QueueNextConversation();
 
     public static event EndConversation OnEndConversation;
+    public static event QueueNextConversation OnNextConversationQueued;
     
     private static DialogManager _instance;
     public static DialogManager Instance
@@ -20,11 +22,14 @@ public class DialogManager : MonoBehaviour
     [HideInInspector] public Queue<Conversation> Conversations = new Queue<Conversation>();
     [SerializeField] private SpeakerUI leftSpeaker;
     [SerializeField] private SpeakerUI rightSpeaker;
+    [SerializeField] private DecisionUI decisionUI;
 
     [SerializeField]private Conversation currentConversation;
     private Character currentCharacter;
     private int convoIdx = -1;
     public float typingSpeed = 0.05f;
+    public bool awaitDecision = false;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -49,12 +54,13 @@ public class DialogManager : MonoBehaviour
     {
         convoIdx = 0;
         currentConversation = conversation;
-
+        decisionUI.HideDialogBox();
         ContinueConversation();
     }
 
     public void ContinueConversation()
     {
+        awaitDecision = false;
         if (convoIdx == -1)
         {
             return;
@@ -66,14 +72,30 @@ public class DialogManager : MonoBehaviour
 
             if (Conversations.Count == 0)
             {
-                if (OnEndConversation != null)
+                if (currentConversation.optionalDecision != null)
                 {
+                    leftSpeaker.HideDialogBox();
+                    rightSpeaker.HideDialogBox();
+                    decisionUI.OpenDecisionBox(currentConversation.optionalDecision);
+                    decisionUI.ShowDialogBox();
+                    awaitDecision = true;
+                }
+                
+                if (OnEndConversation != null && !awaitDecision)
+                {
+                    print("Conversation Ended");
                     OnEndConversation();
                     convoIdx = -1;
                 }
+                
             }
             else
-            {
+            {   
+                print("Next Conversation Queued ");
+                if (OnNextConversationQueued != null)
+                {
+                    OnNextConversationQueued.Invoke();
+                }
                 StartConversation(Conversations.Dequeue());
             }
             return;
@@ -108,7 +130,6 @@ public class DialogManager : MonoBehaviour
             leftSpeaker.SetLines(currentConversation.lines[convoIdx]);
         }
         convoIdx++;
-        
     }
 
     // Update is called once per frame

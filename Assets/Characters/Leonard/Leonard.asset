@@ -21,3 +21,4 @@ MonoBehaviour:
   normalWhereabouts: '- Usually hangs around in school'
   Conversations:
   - {fileID: 11400000, guid: db350f4dfddcec9439f6efc275e771ed, type: 2}
+  - {fileID: 11400000, guid: 36d8ed2815c2c51458f2e9fb04563995, type: 2}

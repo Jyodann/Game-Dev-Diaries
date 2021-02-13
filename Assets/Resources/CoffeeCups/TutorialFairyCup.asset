@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8e9c3a48c97b4418a2264baf2d4fef, type: 3}
+  m_Name: TutorialFairyCup
+  m_EditorClassIdentifier: 
+  GiftName: Tutorial Fairy Coffee Cup
+  GiftIcon: {fileID: -994705577710685585, guid: b299c6c4d36e4a34c84930c79c9dab7c, type: 3}
+  GiftDescription: 'A coffee cup based on the legend of a Fairy that used to guide
+    people along. '
+  currentStock: 5
+  maxStock: 10
+  price: 3

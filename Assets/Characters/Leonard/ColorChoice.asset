@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f271273d407e0874eb311d49cd6ab0dd, type: 3}
+  m_Name: ColorChoice
+  m_EditorClassIdentifier: 
+  decisionTitle: What should I say?
+  Choices:
+  - choiceName: Yellow
+    nextDialog: {fileID: 11400000, guid: 13742d5e352c1b64cbf14a19db5eaf91, type: 2}
+  - choiceName: Green
+    nextDialog: {fileID: 11400000, guid: 653abfbf4d9056846808c7376868fbce, type: 2}
+  - choiceName: Blue
+    nextDialog: {fileID: 11400000, guid: cdaa08faefb9c014da2b04cf45280cf1, type: 2}
+  - choiceName: I don't know?
+    nextDialog: {fileID: 11400000, guid: 8cb4a84073c679742b4a0782c9f2c7be, type: 2}

@@ -617,6 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCharacter: {fileID: 0}
+  CongratulationsMenu: {fileID: 6205907745294153673, guid: 674c5530e796e594fb787a6b3e9fc966, type: 3}
 --- !u!1 &9020898382127910648
 GameObject:
   m_ObjectHideFlags: 0

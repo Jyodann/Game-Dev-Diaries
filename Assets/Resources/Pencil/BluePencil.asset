@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8e9c3a48c97b4418a2264baf2d4fef, type: 3}
+  m_Name: BluePencil
+  m_EditorClassIdentifier: 
+  GiftName: Blue Pencil
+  GiftIcon: {fileID: 2388385606863666162, guid: b299c6c4d36e4a34c84930c79c9dab7c, type: 3}
+  GiftDescription: A blue pencil, good for writing notes.
+  currentStock: 3
+  maxStock: 3
+  price: 2

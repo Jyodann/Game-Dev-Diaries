@@ -6,6 +6,8 @@ using UnityEngine;
 public class FriendActions : MonoBehaviour
 {
     public Character currentCharacter;
+
+    public CongratulationsMenu CongratulationsMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,14 +23,25 @@ public class FriendActions : MonoBehaviour
     public void AskToHangOut()
     {
         DialogManager.Instance.FindAndStartConversation(0, currentCharacter.Conversations);
-        
-        DialogManager.OnEndConversation += DialogManagerOnOnEndConversation;
+        DialogManager.Instance.FindQueueConversation(1, currentCharacter.Conversations);
+        DialogManager.OnNextConversationQueued += OnNextConversation;
+        DialogManager.OnEndConversation += OnEndConversation;
     }
 
-    private void DialogManagerOnOnEndConversation()
+    private void OnEndConversation()
     {
-        DialogManager.OnEndConversation -= DialogManagerOnOnEndConversation;
-        BackdropUI.Instance.ShowHUD(GameStaticData.Instance.backdrops[1]);
+        BackdropUI.Instance.HideHUD();
+        var prefab = Instantiate(CongratulationsMenu);
+        prefab.resultTitle = $"You hung out with {currentCharacter.characterName}";
+        prefab.resultText =
+            $"You gained: \n -5% friendship\n -1% less design time \n\nYou found out:\n -His favourite colour is blue";
+        Destroy(gameObject);
         
+    }
+
+    private void OnNextConversation()
+    {
+        DialogManager.OnNextConversationQueued -= OnNextConversation;
+        BackdropUI.Instance.ShowHUD(GameStaticData.Instance.backdrops[1]);
     }
 }
