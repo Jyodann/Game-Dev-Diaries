@@ -15,5 +15,5 @@ MonoBehaviour:
   Character: {fileID: 11400000, guid: 7305e80aac003184ba9252c6926791a2, type: 2}
   TaskName: Cathy
   TaskDescription: Hi, could you help me with something?
-  chatBubbleConversation: {fileID: 0}
+  chatBubbleConversation: {fileID: 11400000, guid: 69f8eb64e90f415479e5ad1e7ee9c7d0, type: 2}
   taskConversation: {fileID: 0}

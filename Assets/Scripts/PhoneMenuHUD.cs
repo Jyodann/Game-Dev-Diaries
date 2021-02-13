@@ -1,16 +1,36 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class PhoneMenuHUD : MonoBehaviour
 {
+    public static PhoneMenuHUD Instance;
+    [SerializeField] private GameObject MainMenu;
+    
     [SerializeField] private TMP_Dropdown dropdownList;
 
     [SerializeField] private TextMeshProUGUI statsText;
 
     [SerializeField] private PhoneNotifications phoneNotifications;
+
+    [SerializeField] private GameObject[] Menus;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +38,14 @@ public class PhoneMenuHUD : MonoBehaviour
         dropdownList.onValueChanged.AddListener(Changed);
         RefreshStats();
         
+        for (int i = 0; i < Menus.Length; i++)
+        {
+            Menus[i].SetActive(false);
+            Menus[0].SetActive(true);
+        }
     }
 
+    public void ShowMainMenu(bool isVisible) => MainMenu.SetActive(isVisible); 
     private void RefreshStats()
     {
         var data = GameDynamicData.Instance;
@@ -50,7 +76,11 @@ public class PhoneMenuHUD : MonoBehaviour
 
     void Changed(int id)
     {
-        print(id);
+        for (int i = 0; i < Menus.Length; i++)
+        {
+            Menus[i].SetActive(false);
+            Menus[id].SetActive(true);
+        }
     }
     // Update is called once per frame
     void Update()

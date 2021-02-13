@@ -61,6 +61,7 @@ public class GameDynamicData {
     public List<Gift> CurrentlyOwnedGifts = new List<Gift>();
     public List<Gift> SchoolGifts = new List<Gift>();
     public List<Gift> CafeGifts = new List<Gift>();
+    public List<Task> CurrentTasks = new List<Task>();
 }
 
 

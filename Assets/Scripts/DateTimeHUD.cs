@@ -13,6 +13,7 @@ public class DateTimeHUD : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dateText;
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private Button phoneButton;
+    [SerializeField] private GameObject questMenu;
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class DateTimeHUD : MonoBehaviour
     void Start()
     {
         UpdateDateTime();
+        questMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,7 +41,9 @@ public class DateTimeHUD : MonoBehaviour
     }
 
     public void SetPhoneVisibility(bool isVisible) => phoneButton.gameObject.SetActive(isVisible);
-
+    
+    public void ShowQuestMenu() =>  questMenu.SetActive(true);
+    
     public void UpdateDateTime()
     {
         var dateTime = GameDynamicData.Instance.CurrentDateTime;

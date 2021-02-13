@@ -18,9 +18,9 @@ MonoBehaviour:
   - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
     text: What is it?
   - Character: {fileID: 11400000, guid: 7305e80aac003184ba9252c6926791a2, type: 2}
-    text: "Some of the juniors need help with\r programming, it's about some basics,\r
-      you alright with helping them? "
+    text: Some of your juniors need help with programming, it's about some basics,
+      you alright with helping them?
   - Character: {fileID: 11400000, guid: 7305e80aac003184ba9252c6926791a2, type: 2}
-    text: "It will take about 3 hours of your time,\r but I'm sure it'll help sharpen
-      your\r skills!"
+    text: It will take about 3 hours of your time, but I'm sure it'll help sharpen
+      your skills!
   optionalDecision: {fileID: 0}

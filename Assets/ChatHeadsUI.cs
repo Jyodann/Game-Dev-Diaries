@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ChatHeadsUI : MonoBehaviour
 {
-    public Conversation chatConvo;
+    public Task currentTask;
     [SerializeField] private GameObject chatParent;
     [SerializeField] private Notification senderMessage;
     [SerializeField] private Notification replyMessage;
@@ -14,9 +14,13 @@ public class ChatHeadsUI : MonoBehaviour
 
     public void ShowConvo()
     {
+        foreach (Transform child in chatParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
         gameObject.SetActive(true);
 
-        foreach (var line in chatConvo.lines)
+        foreach (var line in currentTask.chatBubbleConversation.lines)
         {
             if (line.Character.isOtherSpeaker)
             {
@@ -36,7 +40,12 @@ public class ChatHeadsUI : MonoBehaviour
 
     public void AgreeToHelp()
     {
-        
+        var prefab = Instantiate(replyMessage, chatParent.transform);
+        prefab.DescriptionDisplay = "Yea, sure!";
+        prefab.TitleDisplay = "You";
+        GameDynamicData.Instance.CurrentTasks.Add(currentTask);
+        GameStaticData.Instance.Tasks.Remove(currentTask);
+        DateTimeHUD.Instance.ShowQuestMenu();
     }
 
     public void GoBack()
