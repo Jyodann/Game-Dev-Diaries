@@ -56,7 +56,10 @@ public class GameDynamicData {
         {ProductionStageHUD.ProductionCycle.Design, 5},
         {ProductionStageHUD.ProductionCycle.ArtSound, 5},
     };
-    
+
+    public List<Gift> CurrentlyOwnedGifts = new List<Gift>();
+    public List<Gift> SchoolGifts = new List<Gift>();
+    public List<Gift> CafeGifts = new List<Gift>();
 }
 
 

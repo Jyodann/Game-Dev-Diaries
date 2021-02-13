@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -54,6 +53,9 @@ public class GameStaticData : MonoBehaviour
     public static GameStaticData Instance;
     public List<Character> Friends;
     public Sprite[] backdrops;
+
+    public List<Gift> AvailableSchoolGifts;
+    public List<Gift> AvailableCafeGifts;
         
     public readonly Dictionary<string, Genders> TargetGenders = new Dictionary<string, Genders>();
     public readonly Dictionary<string, Ages> TargetAge = new Dictionary<string, Ages>();
@@ -124,6 +126,17 @@ public class GameStaticData : MonoBehaviour
         foreach (GameStates gameState in Enum.GetValues(typeof(GameStates)))
         {
             AvailableGameStates[FormatString(gameState.ToString())] = gameState;
+        }
+
+        foreach (var gift in GameStaticData.Instance.AvailableSchoolGifts)
+        {
+            
+            GameDynamicData.Instance.SchoolGifts.Add(gift.Copy());
+        }
+        
+        foreach (var gift in GameStaticData.Instance.AvailableCafeGifts)
+        {
+            GameDynamicData.Instance.CafeGifts.Add(gift.Copy());
         }
     }
 

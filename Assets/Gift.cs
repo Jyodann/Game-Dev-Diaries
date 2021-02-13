@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,4 +14,17 @@ public class Gift : ScriptableObject
     public float currentStock;
     public float maxStock;
     public float price;
+
+    public Gift Copy()
+    {
+        var gift = ScriptableObject.CreateInstance<Gift>();
+        gift.GiftName = this.GiftName;
+        gift.GiftIcon = this.GiftIcon;
+        gift.GiftDescription = this.GiftDescription;
+        gift.currentStock = currentStock;
+        gift.maxStock = maxStock;
+        gift.price = price;
+
+        return gift;
+    }
 }

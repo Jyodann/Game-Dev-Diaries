@@ -6,6 +6,8 @@ using UnityEngine;
 public class SchoolActionsScript : MonoBehaviour
 {
     [SerializeField] private FindFriend findFriendPrefab;
+
+    [SerializeField] private GiftShopStoreBuilder buildShop;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,12 @@ public class SchoolActionsScript : MonoBehaviour
         Destroy(gameObject);
     } 
     public void OpenPrefab(GameObject prefab) => Instantiate(prefab);
+
+    public void OpenShop()
+    {
+        buildShop.Gifts = GameDynamicData.Instance.SchoolGifts;
+        Instantiate(buildShop);
+    }
 
     public void LookForFriends()
     {

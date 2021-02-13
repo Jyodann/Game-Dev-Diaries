@@ -17,6 +17,6 @@ MonoBehaviour:
   GiftDescription: A small and compact green notebook suitable for writing and note
     taking. Contains dotted pages, which makes it extremely suitable for drawing
     sketches too.
-  currentStock: 3
+  currentStock: 5
   maxStock: 5
   price: 5
