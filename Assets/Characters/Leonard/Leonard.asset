@@ -28,6 +28,7 @@ MonoBehaviour:
   dislikeGifts:
   - {fileID: 11400000, guid: 959bc12d6d5cec741840a7056a52cadf, type: 2}
   - {fileID: 11400000, guid: fed26195341bd6c40bb47319ccd5783f, type: 2}
+  - {fileID: 11400000, guid: 36c28bb4301196145a2299f1f53df61b, type: 2}
   favouriteGiftReply: {fileID: 11400000, guid: f053c39b791efa349be6618b8c3fcdad, type: 2}
   neutralGiftReply: {fileID: 11400000, guid: 51813203c98f53a40beb4c169dcb697d, type: 2}
   dislikeGiftReply: {fileID: 11400000, guid: 6b338c38a5b955f4c9f3563cbbb0e014, type: 2}

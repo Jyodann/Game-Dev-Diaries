@@ -6,14 +6,24 @@ using UnityEngine.UI;
 
 public class DecisionUI : MonoBehaviour
 {
+    [SerializeField] private Image characterIcon;
+    public Character currentCharacter;
     public Button choiceButtonPrefab;
-
+    
     public TextMeshProUGUI decisionName;
 
     public GameObject decisionParent;
 
     public void OpenDecisionBox(Decision decision)
     {
+        characterIcon.sprite = GameDynamicData.Instance.IsPlayerFemale
+            ? GameStaticData.Instance.characterPortraits[1]
+            : GameStaticData.Instance.characterPortraits[0];
+        foreach (Transform child in decisionParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        
         decisionName.text = decision.decisionTitle;
 
         for (int i = 0; i < decision.Choices.Length; i++)

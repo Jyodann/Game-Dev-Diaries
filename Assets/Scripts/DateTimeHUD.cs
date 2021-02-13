@@ -14,7 +14,9 @@ public class DateTimeHUD : MonoBehaviour
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private Button phoneButton;
     [SerializeField] private GameObject questMenu;
-
+    [SerializeField] private GameObject phonePrefab;
+    private GameObject phoneCache;
+    public bool isPhoneShown = false;
     private void Awake()
     {
         if (Instance == null)
@@ -50,5 +52,19 @@ public class DateTimeHUD : MonoBehaviour
         timeText.text = dateTime.ToString("t");
         dateText.text = $"{dateTime.ToShortDateString()} {dateTime:ddd}";
         moneyText.text = $"${GameDynamicData.Instance.CurrentMoney.ToString()}";
+    }
+
+    public void ShowPhone()
+    {
+        if (isPhoneShown)
+        {
+            Destroy(phoneCache);
+        }
+        else
+        {
+            phoneCache = Instantiate(phonePrefab);
+        }
+
+        isPhoneShown = !isPhoneShown;
     }
 }

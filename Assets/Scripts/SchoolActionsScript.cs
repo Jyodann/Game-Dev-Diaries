@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class SchoolActionsScript : MonoBehaviour
 {
+    
     [SerializeField] private FindFriend findFriendPrefab;
 
     [SerializeField] private GiftShopStoreBuilder buildShop;
@@ -29,6 +30,12 @@ public class SchoolActionsScript : MonoBehaviour
     {
         buildShop.Gifts = GameDynamicData.Instance.SchoolGifts;
         Instantiate(buildShop);
+    }
+
+    public void CompleteTask()
+    {
+        var task = GameDynamicData.Instance.CurrentTasks[0].taskConversation;
+        DialogManager.Instance.StartConversation(task);
     }
 
     public void LookForFriends()

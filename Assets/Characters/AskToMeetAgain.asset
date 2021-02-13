@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bc4445e17445849a6565d4a67e4443, type: 3}
+  m_Name: AskToMeetAgain
+  m_EditorClassIdentifier: 
+  lines:
+  - Character: {fileID: 11400000, guid: 8bc762abf397035438ad78d8cd593715, type: 2}
+    text: No issue! By the way, could we meet again for things like this?
+  - Character: {fileID: 11400000, guid: 7305e80aac003184ba9252c6926791a2, type: 2}
+    text: Sure, no issues! I'll let you know again!
+  optionalDecision: {fileID: 0}

@@ -77,6 +77,7 @@ public class DialogManager : MonoBehaviour
                     leftSpeaker.HideDialogBox();
                     rightSpeaker.HideDialogBox();
                     decisionUI.OpenDecisionBox(currentConversation.optionalDecision);
+                    
                     decisionUI.ShowDialogBox();
                     awaitDecision = true;
                 }
