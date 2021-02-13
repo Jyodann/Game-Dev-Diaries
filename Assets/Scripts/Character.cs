@@ -19,4 +19,11 @@ public class Character : ScriptableObject
     public string normalWhereabouts;
 
     public List<Conversation> Conversations;
+
+    public List<Gift> favouriteGifts;
+    public List<Gift> dislikeGifts;
+
+    public Conversation favouriteGiftReply;
+    public Conversation neutralGiftReply;
+    public Conversation dislikeGiftReply;
 }

@@ -8,6 +8,8 @@ public class FriendActions : MonoBehaviour
     public Character currentCharacter;
 
     public CongratulationsMenu CongratulationsMenu;
+
+    public GiftSelection GiftSelection;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,14 @@ public class FriendActions : MonoBehaviour
         
     }
 
+    public void GiveGift()
+    {
+        var prefab = Instantiate(GiftSelection);
+        prefab.GetComponent<WindowScript>().WindowTitle = "Give Gift";
+        prefab.GetComponent<WindowScript>().WindowDescription = $"What would you like to give {currentCharacter.characterName}?";
+        prefab.currentFriend = currentCharacter;
+    }
+
     public void AskToHangOut()
     {
         DialogManager.Instance.FindAndStartConversation(0, currentCharacter.Conversations);
@@ -30,6 +40,7 @@ public class FriendActions : MonoBehaviour
 
     private void OnEndConversation()
     {
+        DialogManager.OnEndConversation -= OnEndConversation;
         BackdropUI.Instance.HideHUD();
         var prefab = Instantiate(CongratulationsMenu);
         prefab.resultTitle = $"You hung out with {currentCharacter.characterName}";

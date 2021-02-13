@@ -21,6 +21,7 @@ public class GameDynamicData {
     public int CurrentExp = 0;
     public bool IsNewGame = true;
     private float _currentMoney = 10000f;
+    public float Fans = 0;
 
     public float CurrentMoney
     {

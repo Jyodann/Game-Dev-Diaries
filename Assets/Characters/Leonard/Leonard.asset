@@ -22,3 +22,12 @@ MonoBehaviour:
   Conversations:
   - {fileID: 11400000, guid: db350f4dfddcec9439f6efc275e771ed, type: 2}
   - {fileID: 11400000, guid: 36d8ed2815c2c51458f2e9fb04563995, type: 2}
+  favouriteGifts:
+  - {fileID: 11400000, guid: b35d1fd83df00b44e88a27d251eeecf0, type: 2}
+  - {fileID: 11400000, guid: 87e4763a39b15d04bbd43bc2c4ed51f8, type: 2}
+  dislikeGifts:
+  - {fileID: 11400000, guid: 959bc12d6d5cec741840a7056a52cadf, type: 2}
+  - {fileID: 11400000, guid: fed26195341bd6c40bb47319ccd5783f, type: 2}
+  favouriteGiftReply: {fileID: 11400000, guid: f053c39b791efa349be6618b8c3fcdad, type: 2}
+  neutralGiftReply: {fileID: 11400000, guid: 51813203c98f53a40beb4c169dcb697d, type: 2}
+  dislikeGiftReply: {fileID: 11400000, guid: 6b338c38a5b955f4c9f3563cbbb0e014, type: 2}

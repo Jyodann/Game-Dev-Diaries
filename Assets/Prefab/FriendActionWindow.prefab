@@ -618,6 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCharacter: {fileID: 0}
   CongratulationsMenu: {fileID: 6205907745294153673, guid: 674c5530e796e594fb787a6b3e9fc966, type: 3}
+  GiftSelection: {fileID: 6672028795414672595, guid: d64eae4fac6275e43b0f1ca7cd2b8389, type: 3}
 --- !u!1 &9020898382127910648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,7 +1140,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9020898382775548252}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5190734598084539576}
+        m_TargetAssemblyTypeName: FriendActions, Assembly-CSharp
+        m_MethodName: GiveGift
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9020898383010737952
 GameObject:
   m_ObjectHideFlags: 0
