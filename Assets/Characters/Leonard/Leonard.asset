@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc6e869001eafa8498dd74ea2e1d6ab5, type: 3}
-  m_Name: Uwais
+  m_Name: Leonard
   m_EditorClassIdentifier: 
-  characterName: Uwais
-  portrait: {fileID: -268699529588752494, guid: b176aa9af3934974abae5f1ecd2ea627, type: 3}
+  characterName: Leonard
+  portrait: {fileID: -951488584558703231, guid: b176aa9af3934974abae5f1ecd2ea627, type: 3}
   isOtherSpeaker: 1
   currentFriendshipPoints: 0
   characterMeetMethod: Met through school
   currentBenefits: '- Reduced Art/Sound time by 2%'
   normalWhereabouts: '- Usually hangs around in school'
+  Conversations:
+  - {fileID: 11400000, guid: db350f4dfddcec9439f6efc275e771ed, type: 2}

@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 5497192483651789867}
   - component: {fileID: 5372008632623322364}
   - component: {fileID: 8189461039456112480}
+  - component: {fileID: 5190734598084539576}
   m_Layer: 5
   m_Name: FriendActionWindow
   m_TagString: Untagged
@@ -603,6 +604,19 @@ MonoBehaviour:
   WindowDescription: 
   windowTitle: {fileID: 966587063135759106}
   windowDescription: {fileID: 947871734319239116}
+--- !u!114 &5190734598084539576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8189461039456112481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9cec73a984f4c94db68de27f40e6030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCharacter: {fileID: 0}
 --- !u!1 &9020898382127910648
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +872,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9020898382366513284}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5190734598084539576}
+        m_TargetAssemblyTypeName: FriendActions, Assembly-CSharp
+        m_MethodName: AskToHangOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9020898382419992138
 GameObject:
   m_ObjectHideFlags: 0

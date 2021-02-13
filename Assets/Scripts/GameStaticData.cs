@@ -47,12 +47,14 @@ public class GameStaticData : MonoBehaviour
     }
 
     public readonly List<string> WorkingText = new List<string>() { "Coding...", "Drawing...", "Eating...", "Drinking Coffee", "Thinking...", "Procrastinating...", "Designing...", "Writing...", "Watching tutorials...", "Browsing Stackoverflow..." };
+   
     
     public Sprite[] characterPortraits;
     public List<Conversation> Conversations;
     public static GameStaticData Instance;
     public List<Character> Friends;
-
+    public Sprite[] backdrops;
+        
     public readonly Dictionary<string, Genders> TargetGenders = new Dictionary<string, Genders>();
     public readonly Dictionary<string, Ages> TargetAge = new Dictionary<string, Ages>();
     public readonly Dictionary<string, Platforms> TargetPlatforms = new Dictionary<string, Platforms>();

@@ -120,9 +120,9 @@ public class DialogManager : MonoBehaviour
         }
     }
     
-    public void FindAndStartConversation(string conversationName)
+    public void FindAndStartConversation(string conversationName, List<Conversation> conversations)
     {
-        var match = GameStaticData.Instance.Conversations.Find(x => x.name.Equals(conversationName));
+        var match = conversations.Find(x => x.name.Equals(conversationName));
         if (match == null)
         {
             Debug.LogError("Conversation Could not be found");
@@ -131,9 +131,31 @@ public class DialogManager : MonoBehaviour
         StartConversation(match);
     }
     
-    public void FindQueueConversation(string conversationName)
+    public void FindAndStartConversation(int conversationId, List<Conversation> conversations)
     {
-        var match = GameStaticData.Instance.Conversations.Find(x => x.name.Equals(conversationName));
+        var match = conversations[conversationId];
+        if (match == null)
+        {
+            Debug.LogError("Conversation Could not be found");
+            return;
+        }
+        StartConversation(match);
+    }
+    
+    public void FindQueueConversation(string conversationName, List<Conversation> conversations)
+    {
+        var match = conversations.Find(x => x.name.Equals(conversationName));
+        if (match == null)
+        {
+            Debug.LogError("Conversation Could not be found");
+            return;
+        }
+        Conversations.Enqueue(match);
+    }
+    
+    public void FindQueueConversation(int conversationId, List<Conversation> conversations)
+    {
+        var match = conversations[conversationId];
         if (match == null)
         {
             Debug.LogError("Conversation Could not be found");

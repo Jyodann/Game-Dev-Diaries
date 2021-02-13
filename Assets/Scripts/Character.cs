@@ -17,4 +17,6 @@ public class Character : ScriptableObject
     public string currentBenefits;
     [TextArea(4,10)]
     public string normalWhereabouts;
+
+    public List<Conversation> Conversations;
 }

@@ -22,7 +22,7 @@ public class FindFriend : MonoBehaviour
             
             var prefab = Instantiate(friendButtonPrefab, friendListTransform.transform);
             prefab.GetComponentInChildren<TextMeshProUGUI>().text = friend.characterName;
-            prefab.GetComponent<Button>().onClick.AddListener(delegate { OpenActionWindow(friend.characterName); });
+            prefab.GetComponent<Button>().onClick.AddListener(delegate { OpenActionWindow(friend); });
         }
     }
 
@@ -32,11 +32,12 @@ public class FindFriend : MonoBehaviour
         
     }
 
-    public void OpenActionWindow(string friendName)
+    public void OpenActionWindow(Character friend)
     {
          var prefab =  Instantiate(friendActionWindow);
-         prefab.WindowTitle = friendName;
-         prefab.WindowDescription = $"What would you like to do with {friendName}";
+         prefab.WindowTitle = friend.characterName;
+         prefab.WindowDescription = $"What would you like to do with {friend.characterName}?";
+         prefab.GetComponent<FriendActions>().currentCharacter = friend;
     }
 
     public void CloseHUD() => Destroy(gameObject);

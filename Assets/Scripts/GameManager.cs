@@ -21,9 +21,9 @@ public class GameManager : MonoBehaviour
         
         if (GameDynamicData.Instance.IsNewGame)
         {
-            DialogManager.Instance.FindAndStartConversation("Introduction");
+            DialogManager.Instance.FindAndStartConversation("Introduction", GameStaticData.Instance.Conversations);
 
-            DialogManager.Instance.FindQueueConversation("Tutorial");
+            DialogManager.Instance.FindQueueConversation("Tutorial", GameStaticData.Instance.Conversations);
         }
         
         ChooserMenu.OnButtonFinish += ChooserMenuOnOnButtonFinish;

@@ -33,8 +33,10 @@ public class SpeakerUI : MonoBehaviour
     
     IEnumerator Type(string line)
     {
+       
         isReady = false;
         button.SetActive(false);
+        line = line.Replace("{:}", GameDynamicData.Instance.PlayerName);
         foreach (var letter in line.ToCharArray())
         {
             speakerText.text += letter;
