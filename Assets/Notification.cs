@@ -16,7 +16,10 @@ public class Notification : MonoBehaviour
 
     private void Start()
     {
-        NotificationIcon.sprite = IconDisplay;
+        if (NotificationIcon)
+        {
+            NotificationIcon.sprite = IconDisplay;
+        }
         NotificationTitle.text = TitleDisplay;
         NotificationDesc.text = DescriptionDisplay;
     }

@@ -9,11 +9,19 @@ public class PhoneMenuHUD : MonoBehaviour
     [SerializeField] private TMP_Dropdown dropdownList;
 
     [SerializeField] private TextMeshProUGUI statsText;
+
+    [SerializeField] private PhoneNotifications phoneNotifications;
     // Start is called before the first frame update
     void Start()
     {
         dropdownList.options[1].text = "Notifications (2)";
         dropdownList.onValueChanged.AddListener(Changed);
+        RefreshStats();
+        
+    }
+
+    private void RefreshStats()
+    {
         var data = GameDynamicData.Instance;
         var staticData = GameStaticData.Instance;
         var sb = new StringBuilder();
@@ -38,7 +46,6 @@ public class PhoneMenuHUD : MonoBehaviour
         sb.AppendLine($"Design Points: {data.CurrentProdCyclePoints[ProductionStageHUD.ProductionCycle.Design]}");
         sb.AppendLine($"Art/Sound Points: {data.CurrentProdCyclePoints[ProductionStageHUD.ProductionCycle.ArtSound]}");
         statsText.text = sb.ToString();
-        
     }
 
     void Changed(int id)

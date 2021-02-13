@@ -56,6 +56,7 @@ public class GameStaticData : MonoBehaviour
 
     public List<Gift> AvailableSchoolGifts;
     public List<Gift> AvailableCafeGifts;
+    public List<Task> Tasks;
         
     public readonly Dictionary<string, Genders> TargetGenders = new Dictionary<string, Genders>();
     public readonly Dictionary<string, Ages> TargetAge = new Dictionary<string, Ages>();

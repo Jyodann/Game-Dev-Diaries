@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6e869001eafa8498dd74ea2e1d6ab5, type: 3}
+  m_Name: MsCathy
+  m_EditorClassIdentifier: 
+  characterName: Ms Cathy
+  portrait: {fileID: -444666004907284591, guid: b176aa9af3934974abae5f1ecd2ea627, type: 3}
+  isOtherSpeaker: 1
+  currentFriendshipPoints: 0
+  characterMeetMethod: '- Met through school'
+  currentBenefits: 
+  normalWhereabouts: '- Usually around school in the afternoon'
+  Conversations: []
+  favouriteGifts: []
+  dislikeGifts: []
+  favouriteGiftReply: {fileID: 0}
+  neutralGiftReply: {fileID: 0}
+  dislikeGiftReply: {fileID: 0}
