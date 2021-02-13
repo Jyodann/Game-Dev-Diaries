@@ -989,6 +989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completeTaskButton: {fileID: 3408502199874104227}
   findFriendPrefab: {fileID: 8888022730525842924, guid: babd7de8945d346478f160a20fe31ffa, type: 3}
+  CongratulationsMenu: {fileID: 6205907745294153673, guid: 674c5530e796e594fb787a6b3e9fc966, type: 3}
   buildShop: {fileID: 7652551558304468817, guid: 28a9d195e9e180c4987c8aa42a8eb21c, type: 3}
 --- !u!1 &7761906784991777050
 GameObject:

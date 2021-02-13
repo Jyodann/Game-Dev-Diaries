@@ -5,7 +5,7 @@ public class SchoolActionsScript : MonoBehaviour
 {
     [SerializeField] private GameObject completeTaskButton;
     [SerializeField] private FindFriend findFriendPrefab;
-
+    [SerializeField] private CongratulationsMenu CongratulationsMenu;
     [SerializeField] private GiftShopStoreBuilder buildShop;
     // Start is called before the first frame update
     void Start()
@@ -54,7 +54,9 @@ public class SchoolActionsScript : MonoBehaviour
     private void DialogManagerOnOnEndConversation()
     {
         DialogManager.OnEndConversation -= DialogManagerOnOnEndConversation;
-        
+        var prefab = Instantiate(CongratulationsMenu);
+        prefab.resultTitle = "Task complete!";
+        prefab.resultText = "Relationship with Ms Cathy: +5%\n\nBenefits: \n- Development takes 1% less time now. \n- Development limit increased by 5%";
     }
 
     public void LookForFriends()
