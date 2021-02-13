@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59bc4445e17445849a6565d4a67e4443, type: 3}
-  m_Name: StartingConvoLeonard
+  m_Name: Hangout1
   m_EditorClassIdentifier: 
   lines:
   - Character: {fileID: 11400000, guid: 831f7e246e38c5d48b33fe391c5cfbc9, type: 2}
-    text: Oh, it's {:}. You want to hang out?
-  - Character: {fileID: 11400000, guid: 831f7e246e38c5d48b33fe391c5cfbc9, type: 2}
-    text: 'Sure, I''ve got time. '
+    text: Say {:}, I was wondering ... what's your favourite colour?
   optionalDecision: {fileID: 0}

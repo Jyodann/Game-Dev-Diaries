@@ -6,6 +6,7 @@ using UnityEngine;
 public class Conversation : ScriptableObject
 {
     public CharacterLines[] lines;
+    public Decision optionalDecision;
 }
 
 
