@@ -140,10 +140,7 @@ public class GameStaticData : MonoBehaviour
             GameDynamicData.Instance.CafeGifts.Add(gift.Copy());
         }
 
-        foreach (var task in Instance.Tasks)
-        {
-            GameDynamicData.Instance.CurrentTasks.Add(task);
-        }
+        
     }
 
     private static string FormatString(string stringToFormat) => stringToFormat.Replace('_', ' ');

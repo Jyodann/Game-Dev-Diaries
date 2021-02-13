@@ -45,7 +45,7 @@ public class ChatHeadsUI : MonoBehaviour
         prefab.TitleDisplay = "You";
         GameDynamicData.Instance.CurrentTasks.Add(currentTask);
         GameStaticData.Instance.Tasks.Remove(currentTask);
-        DateTimeHUD.Instance.ShowQuestMenu();
+        DateTimeHUD.Instance.ShowQuestMenu(true);
     }
 
     public void GoBack()

@@ -44,7 +44,7 @@ public class DateTimeHUD : MonoBehaviour
 
     public void SetPhoneVisibility(bool isVisible) => phoneButton.gameObject.SetActive(isVisible);
     
-    public void ShowQuestMenu() =>  questMenu.SetActive(true);
+    public void ShowQuestMenu(bool isVisible) =>  questMenu.SetActive(isVisible);
     
     public void UpdateDateTime()
     {

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SchoolActionsScript : MonoBehaviour
 {
-    
+    [SerializeField] private GameObject completeTaskButton;
     [SerializeField] private FindFriend findFriendPrefab;
 
     [SerializeField] private GiftShopStoreBuilder buildShop;
@@ -11,6 +11,15 @@ public class SchoolActionsScript : MonoBehaviour
     void Start()
     {
         PlayerHUDManager.Instance.ChangeVisibility(false);
+        print(GameDynamicData.Instance.CurrentTasks.Count);
+        if (GameDynamicData.Instance.CurrentTasks.Count != 0)
+        {
+            completeTaskButton.SetActive(true);
+        }
+        else
+        {
+            completeTaskButton.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -34,8 +43,18 @@ public class SchoolActionsScript : MonoBehaviour
 
     public void CompleteTask()
     {
-        var task = GameDynamicData.Instance.CurrentTasks[0].taskConversation;
-        DialogManager.Instance.StartConversation(task);
+        var task = GameDynamicData.Instance.CurrentTasks[0];
+        DialogManager.Instance.StartConversation(task.taskConversation);
+        DialogManager.OnEndConversation += DialogManagerOnOnEndConversation;
+        GameDynamicData.Instance.CurrentTasks.Remove(task);
+        DateTimeHUD.Instance.ShowQuestMenu(false);
+        completeTaskButton.SetActive(false);
+    }
+
+    private void DialogManagerOnOnEndConversation()
+    {
+        DialogManager.OnEndConversation -= DialogManagerOnOnEndConversation;
+        
     }
 
     public void LookForFriends()
