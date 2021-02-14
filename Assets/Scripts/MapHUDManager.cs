@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class MapHUDManager : MonoBehaviour
 {
-    public void OpenPrefab(GameObject prefab) => Instantiate(prefab);
+    public void OpenPrefab(GameObject prefab)
+    {
+        PlayerHUDManager.Instance.ChangeVisibility(false);
+        Instantiate(prefab);
+    }
 }
