@@ -17,13 +17,13 @@ public class FindFriend : MonoBehaviour
     void Start()
     {
         windowTitle.text = $"People currently in {LocationName.ToLower()}:";
-        foreach (var friend in GameStaticData.Instance.Friends)
-        {
+        var friend = GameStaticData.Instance.Friends[0];
+        
             
             var prefab = Instantiate(friendButtonPrefab, friendListTransform.transform);
             prefab.GetComponentInChildren<TextMeshProUGUI>().text = friend.characterName;
             prefab.GetComponent<Button>().onClick.AddListener(delegate { OpenActionWindow(friend); });
-        }
+        
     }
 
     // Update is called once per frame

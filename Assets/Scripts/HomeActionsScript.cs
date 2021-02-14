@@ -65,6 +65,7 @@ public class HomeActionsScript : MonoBehaviour
     public void CloseUI()
     {
         PlayerHUDManager.Instance.ChangeVisibility(true);
+        Tutorial.Instance.PromptToClickPhone();
         Destroy(gameObject);
     }
 }

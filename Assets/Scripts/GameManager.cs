@@ -18,14 +18,12 @@ public class GameManager : MonoBehaviour
             GameDynamicData.Instance.IsPlayerFemale = isFemale;
             GameDynamicData.Instance.IsNewGame = isNewGame;
         }
-        
         if (GameDynamicData.Instance.IsNewGame)
         {
             DialogManager.Instance.FindAndStartConversation("Introduction", GameStaticData.Instance.Conversations);
 
             DialogManager.Instance.FindQueueConversation("Tutorial", GameStaticData.Instance.Conversations);
         }
-        
         ChooserMenu.OnButtonFinish += ChooserMenuOnOnButtonFinish;
     }
 

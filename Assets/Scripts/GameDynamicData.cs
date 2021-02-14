@@ -17,12 +17,26 @@ public class GameDynamicData {
 
     public string PlayerName = string.Empty;
     public bool IsPlayerFemale = true;
-    public int CurrentLevel = 1;
-    public int CurrentExp = 0;
+    private int _currentExp = 1000;
+
+    public int CurrentExp
+    {
+        get => _currentExp;
+        set
+        {
+            _currentExp = value;
+            
+            PlayerHUDManager.Instance.UpdateUI();
+        }
+    }
     public bool IsNewGame = true;
     private float _currentMoney = 10000f;
     public float Fans = 0;
 
+    public int ReturnLevel()
+    {
+        return CurrentExp / 1000;
+    }
     public float CurrentMoney
     {
         get => _currentMoney;
@@ -34,6 +48,8 @@ public class GameDynamicData {
     }
     
     private DateTime dateTime = DateTime.Parse("23 Jan 2021 08:00");
+
+    public DateTime StartPlayTime = DateTime.Now;
     public DateTime CurrentDateTime
     {
         get => dateTime;

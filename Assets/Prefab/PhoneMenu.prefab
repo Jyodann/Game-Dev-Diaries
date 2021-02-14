@@ -3155,7 +3155,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: Your Stats
       m_Image: {fileID: 21300000, guid: 7ee063b0a155f984094a7b39547ecca8, type: 3}
-    - m_Text: Notifications
+    - m_Text: Help Requests
       m_Image: {fileID: 0}
     - m_Text: Your Friends
       m_Image: {fileID: 0}

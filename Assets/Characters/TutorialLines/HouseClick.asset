@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bc4445e17445849a6565d4a67e4443, type: 3}
+  m_Name: HouseClick
+  m_EditorClassIdentifier: 
+  lines:
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: Oh! Looks like you found your way back home!
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: 'Welcome to your humble abode, in here, you can make your dream games,
+      do research, sleep, and... well that''s almost about it really. '
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: So... why don't you try making a game?
+  optionalDecision: {fileID: 0}

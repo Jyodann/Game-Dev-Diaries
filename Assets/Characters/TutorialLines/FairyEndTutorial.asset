@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bc4445e17445849a6565d4a67e4443, type: 3}
+  m_Name: FairyEndTutorial
+  m_EditorClassIdentifier: 
+  lines:
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: Well, that concludes all of my tutoring. You are now free to do whatever
+      you want!
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: Just remember to keep up with your friends, and your games too. Do research
+      and choose the right pairings.
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: Ask for help, and constantly improve. You'll be a good game developer in
+      no time, {:}.
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: Alas, it looks like I have to go soon. Someone else might need my help
+      in some other game.
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: 'Sadly, this game is in a demo state currently, meaning your interactions
+      are limiited. D:'
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: However, I wish you could have as much fun as possible in this demo.
+  - Character: {fileID: 11400000, guid: 32e38a2ac4864a24881030c980d01cae, type: 2}
+    text: I wish you all the best {:}, have fun in Game Dev Diaries!
+  optionalDecision: {fileID: 0}
