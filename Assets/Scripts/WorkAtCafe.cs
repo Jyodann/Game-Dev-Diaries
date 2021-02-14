@@ -23,7 +23,7 @@ public class WorkAtCafe : MonoBehaviour
     {
         var prefab = Instantiate(workAtCafeCongratulationsMenu);
         prefab.resultTitle = "Work at Cafe";
-        prefab.resultText = "You gained:\n -$60\n -200 EXP";
+        prefab.resultText = "You gained:\n+$60\n+200 EXP";
 
         GameDynamicData.Instance.CurrentMoney += 60;
         GameDynamicData.Instance.CurrentDateTime = GameDynamicData.Instance.CurrentDateTime.AddHours(8);
