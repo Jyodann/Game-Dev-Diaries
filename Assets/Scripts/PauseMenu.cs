@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public bool isPaused = false;
-
+    public static bool isPaused = false;
+    public static bool canBePaused = true;
     [SerializeField] private GameObject pauseHUD;
     // Start is called before the first frame update
+    
+    
     void Start()
     {
         
@@ -17,6 +19,10 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canBePaused)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause();
@@ -28,7 +34,7 @@ public class PauseMenu : MonoBehaviour
         pauseHUD.SetActive(!isPaused);
         isPaused = !isPaused;
     }
-
+    
     public void QuitGame()
     {
         SceneManager.LoadScene(0);

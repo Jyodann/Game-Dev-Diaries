@@ -34,7 +34,7 @@ public class PhoneMenuHUD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        PauseMenu.canBePaused = false;
         dropdownList.onValueChanged.AddListener(Changed);
         RefreshStats();
         
@@ -85,6 +85,11 @@ public class PhoneMenuHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseMenu.canBePaused = true;
+            DateTimeHUD.isPhoneShown = false;
+            Destroy(gameObject);
+        }
     }
 }

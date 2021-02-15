@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193f082ecd94a3047b2c807feceea647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  developerMode: 0
+  developerMode: 1
   developerName: 
   isFemale: 0
   isNewGame: 0
@@ -5101,7 +5101,6 @@ MonoBehaviour:
   phoneButton: {fileID: 485140736}
   questMenu: {fileID: 1541232580}
   phonePrefab: {fileID: 4003973929498236994, guid: 12ceb3dc3a0b45e49b91d5a7db7abb12, type: 3}
-  isPhoneShown: 0
 --- !u!1 &1920676032
 GameObject:
   m_ObjectHideFlags: 0
@@ -6226,7 +6225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734eed60cdad4f1468c4838f234b363d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 0
   pauseHUD: {fileID: 1049019671}
 --- !u!1001 &6575868829055485179
 PrefabInstance:
@@ -6688,7 +6686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit Game
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c00bc0404bb0824da6d3624fe693564, type: 2}
   m_sharedMaterial: {fileID: 8094238192910877788, guid: 5c00bc0404bb0824da6d3624fe693564, type: 2}

@@ -16,7 +16,7 @@ public class DateTimeHUD : MonoBehaviour
     [SerializeField] private GameObject questMenu;
     [SerializeField] private GameObject phonePrefab;
     private GameObject phoneCache;
-    public bool isPhoneShown = false;
+    public static bool isPhoneShown = false;
     private void Awake()
     {
         if (Instance == null)
