@@ -65,6 +65,12 @@ public class DialogManager : MonoBehaviour
         {
             return;
         }
+        
+        if (!leftSpeaker.isReady || !rightSpeaker.isReady)
+        {
+            return;
+        }
+        
         if (convoIdx > currentConversation.lines.Length - 1)
         {
             rightSpeaker.HideDialogBox();
@@ -102,10 +108,7 @@ public class DialogManager : MonoBehaviour
             return;
         }
         
-        if (!leftSpeaker.isReady || !rightSpeaker.isReady)
-        {
-            return;
-        }
+        
 
         if (!currentConversation.lines[convoIdx].Character)
         {
@@ -131,15 +134,6 @@ public class DialogManager : MonoBehaviour
             leftSpeaker.SetLines(currentConversation.lines[convoIdx]);
         }
         convoIdx++;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ContinueConversation();
-        }
     }
     
     public void FindAndStartConversation(string conversationName, List<Conversation> conversations)
