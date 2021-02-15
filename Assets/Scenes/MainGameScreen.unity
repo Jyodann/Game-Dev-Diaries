@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193f082ecd94a3047b2c807feceea647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  developerMode: 1
+  developerMode: 0
   developerName: 
   isFemale: 0
   isNewGame: 0
@@ -4223,7 +4223,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aa4f2329f50d7fe4bb0651393ac6f5d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d498124aecc491e4db764bd53d109049, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
