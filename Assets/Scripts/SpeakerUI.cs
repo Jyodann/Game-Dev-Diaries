@@ -26,7 +26,9 @@ public class SpeakerUI : MonoBehaviour
             speakerImage.sprite = GameDynamicData.Instance.IsPlayerFemale ? gameStaticData.characterPortraits[1] : gameStaticData.characterPortraits[0];
             speakerName.text = GameDynamicData.Instance.PlayerName;
         }
+        characterLine.text = characterLine.text.Replace("{:}", GameDynamicData.Instance.PlayerName);
         StartCoroutine(Type(characterLine.text));
+        
         isReady = false;
     }
 
@@ -39,7 +41,7 @@ public class SpeakerUI : MonoBehaviour
         isReady = false;
         button.SetActive(false);
      
-        line = line.Replace("{:}", GameDynamicData.Instance.PlayerName);
+        
         foreach (var letter in line.ToCharArray())
         {
             

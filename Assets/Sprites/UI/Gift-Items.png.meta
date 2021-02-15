@@ -1,52 +1,43 @@
 fileFormatVersion: 2
-guid: b176aa9af3934974abae5f1ecd2ea627
+guid: b299c6c4d36e4a34c84930c79c9dab7c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2231720224329544501
-    second: PlayerPortraits_0
+      213: -4828317614163730838
+    second: Gift-Items_0
   - first:
-      213: 87038549190171985
-    second: PlayerPortraits_1
+      213: -8486768687106134695
+    second: Gift-Items_1
   - first:
-      213: -5719980801006804753
-    second: PlayerPortraits_2
+      213: 7549149039724779270
+    second: Gift-Items_2
   - first:
-      213: 68167681262868801
-    second: PlayerPortraits_3
+      213: -8539832335497576470
+    second: Gift-Items_3
   - first:
-      213: -444666004907284591
-    second: PlayerPortraits_4
+      213: 2388385606863666162
+    second: Gift-Items_4
   - first:
-      213: 7958659064553099579
-    second: PlayerPortraits_0
+      213: 816619792300718939
+    second: Gift-Items_5
   - first:
-      213: 6837869355870656881
-    second: PlayerPortraits_1
+      213: 8552095772589371730
+    second: Gift-Items_6
   - first:
-      213: -8545069414095928930
-    second: PlayerPortraits_2
+      213: -5161077191686232245
+    second: Gift-Items_7
   - first:
-      213: 2860897817909029112
-    second: PlayerPortraits_3
+      213: -466099494585531495
+    second: Gift-Items_8
   - first:
-      213: -5245171708844094453
-    second: PlayerPortraits_4
+      213: -994705577710685585
+    second: Gift-Items_9
   - first:
-      213: -951488584558703231
-    second: PlayerPortraits_5
+      213: -1102329678985466857
+    second: Gift-Items_10
   - first:
-      213: -268699529588752494
-    second: PlayerPortraits_6
-  - first:
-      213: 2694674586303458115
-    second: PlayerPortraits_5
-  - first:
-      213: -3930158025450333710
-    second: PlayerPortraits_6
-  - first:
-      213: -8960722870016323254
-    second: PlayerPortraits_7
+      213: -2500151562202798296
+    second: Gift-Items_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -146,13 +137,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerPortraits_0
+      name: Gift-Items_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 360
-        width: 40
-        height: 40
+        y: 98
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b31512f9046d27e60800000000000000
-      internalID: 7958659064553099579
+      spriteID: a6e520126be5efcb0800000000000000
+      internalID: -4828317614163730838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerPortraits_1
+      name: Gift-Items_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 360
-        width: 40
-        height: 40
+        x: 30
+        y: 98
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 179133953fdf4ee50800000000000000
-      internalID: 6837869355870656881
+      spriteID: 95d612a08d0f83a80800000000000000
+      internalID: -8486768687106134695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerPortraits_2
+      name: Gift-Items_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 360
-        width: 40
-        height: 40
+        x: 60
+        y: 98
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e91c1cf34a0d96980800000000000000
-      internalID: -8545069414095928930
+      spriteID: 607d645fd07f3c860800000000000000
+      internalID: 7549149039724779270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerPortraits_3
+      name: Gift-Items_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
-        width: 40
-        height: 40
+        x: 90
+        y: 98
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,41 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f8682f5863f3b720800000000000000
-      internalID: 2860897817909029112
+      spriteID: aefb541acbb6c7980800000000000000
+      internalID: -8539832335497576470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerPortraits_4
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 320
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0c4b64fe186537b0800000000000000
-      internalID: -5245171708844094453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerPortraits_5
+      name: Gift-Items_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 280
-        width: 40
-        height: 40
+        y: 68
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34be3ed5248656520800000000000000
-      internalID: 2694674586303458115
+      spriteID: 2fbb3c32e00452120800000000000000
+      internalID: 2388385606863666162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerPortraits_6
+      name: Gift-Items_5
       rect:
         serializedVersion: 2
-        x: 40
-        y: 280
-        width: 40
-        height: 40
+        x: 30
+        y: 68
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f9d1e549164579c0800000000000000
-      internalID: -3930158025450333710
+      spriteID: b5b33acdf57355b00800000000000000
+      internalID: 816619792300718939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerPortraits_7
+      name: Gift-Items_6
       rect:
         serializedVersion: 2
-        x: 80
-        y: 280
-        width: 40
-        height: 40
+        x: 60
+        y: 68
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,8 +277,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4155f1960e15a380800000000000000
-      internalID: -8960722870016323254
+      spriteID: 2513f425bc52fa670800000000000000
+      internalID: 8552095772589371730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gift-Items_7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 68
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47eb2383ab2068b0800000000000000
+      internalID: -5161077191686232245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gift-Items_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9938d3baaf41889f0800000000000000
+      internalID: -466099494585531495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gift-Items_9
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 38
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6274781c881232f0800000000000000
+      internalID: -994705577710685585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gift-Items_10
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 38
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c63b25ffcb3b0f0800000000000000
+      internalID: -1102329678985466857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gift-Items_11
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 38
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827a34a866dad4dd0800000000000000
+      internalID: -2500151562202798296
       vertices: []
       indices: 
       edges: []

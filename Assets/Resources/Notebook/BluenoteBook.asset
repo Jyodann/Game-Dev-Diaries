@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BluenoteBook
   m_EditorClassIdentifier: 
   GiftName: Blue Notebook
-  GiftIcon: {fileID: 21300000, guid: b418c9c49ed76e24e8c96b648c6fd135, type: 3}
+  GiftIcon: {fileID: -4828317614163730838, guid: b299c6c4d36e4a34c84930c79c9dab7c, type: 3}
   GiftDescription: A small and compact blue notebook suitable for writing and note
     taking. Contains dotted pages, which makes it extremely suitable for drawing
     sketches too.
