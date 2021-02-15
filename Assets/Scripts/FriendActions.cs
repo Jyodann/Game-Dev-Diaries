@@ -45,7 +45,7 @@ public class FriendActions : MonoBehaviour
         var prefab = Instantiate(CongratulationsMenu);
         prefab.resultTitle = $"You hung out with {currentCharacter.characterName}";
         prefab.resultText =
-            $"You gained: \n -5% friendship\n -1% less design time \n\nYou found out:\n -His favourite colour is blue";
+            $"You gained: \n +5% friendship\n +1% less design time \n\nYou found out:\n -His favourite colour is blue";
         Destroy(gameObject);
         
     }
