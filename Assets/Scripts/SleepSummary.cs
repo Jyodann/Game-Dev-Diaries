@@ -25,7 +25,6 @@ public class SleepSummary : MonoBehaviour
         sb.AppendLine($"Goodnight, {GameDynamicData.Instance.PlayerName}");
         sb.AppendLine($"Tomorrow's Date: {GameDynamicData.Instance.CurrentDateTime.ToShortDateString()}");
         sb.AppendLine($"Your development journey has gone on for {currentDevJourney} days");
-        sb.AppendLine($"You've been playing for: {timePlaying.Hours}h {timePlaying.Days}m {timePlaying.Seconds}s");
 
         goodnightText.text = sb.ToString();
         StartCoroutine(FadeIn());

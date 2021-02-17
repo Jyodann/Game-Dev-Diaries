@@ -796,7 +796,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Joey
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7421365e379e5bb4f87d9e986ff01e2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5c00bc0404bb0824da6d3624fe693564, type: 2}
   m_sharedMaterial: {fileID: 7060354870571877105, guid: 7421365e379e5bb4f87d9e986ff01e2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -825,7 +825,7 @@ MonoBehaviour:
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 72
+  m_fontSizeMin: 48
   m_fontSizeMax: 80
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -860,7 +860,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &300492484
@@ -2712,7 +2712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 655, y: 500}
+  m_AnchoredPosition: {x: 635, y: 500}
   m_SizeDelta: {x: 610, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1014402056
@@ -4902,8 +4902,8 @@ MonoBehaviour:
   m_text: You've committed to helping your teacher in the afternoon. Visit the school
     to start the task!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c00bc0404bb0824da6d3624fe693564, type: 2}
-  m_sharedMaterial: {fileID: 8094238192910877788, guid: 5c00bc0404bb0824da6d3624fe693564, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7421365e379e5bb4f87d9e986ff01e2d, type: 2}
+  m_sharedMaterial: {fileID: 7060354870571877105, guid: 7421365e379e5bb4f87d9e986ff01e2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4927,10 +4927,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 24
   m_fontStyle: 0
@@ -5136,7 +5136,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -700, y: -420}
-  m_SizeDelta: {x: 250, y: 50}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1920676034
 MonoBehaviour:
@@ -5430,8 +5430,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Joey
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7421365e379e5bb4f87d9e986ff01e2d, type: 2}
-  m_sharedMaterial: {fileID: 7060354870571877105, guid: 7421365e379e5bb4f87d9e986ff01e2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5c00bc0404bb0824da6d3624fe693564, type: 2}
+  m_sharedMaterial: {fileID: 8094238192910877788, guid: 5c00bc0404bb0824da6d3624fe693564, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5459,7 +5459,7 @@ MonoBehaviour:
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 72
+  m_fontSizeMin: 48
   m_fontSizeMax: 80
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -5494,7 +5494,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1957039339
@@ -5639,8 +5639,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: World Map
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7421365e379e5bb4f87d9e986ff01e2d, type: 2}
-  m_sharedMaterial: {fileID: 7060354870571877105, guid: 7421365e379e5bb4f87d9e986ff01e2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5c00bc0404bb0824da6d3624fe693564, type: 2}
+  m_sharedMaterial: {fileID: 8094238192910877788, guid: 5c00bc0404bb0824da6d3624fe693564, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
