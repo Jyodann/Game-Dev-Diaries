@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+# Welcome to Game Dev Diaries's Information Page
 
-You can use the [editor on GitHub](https://github.com/JordynWinnie/Game-Dev-Diaries/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Gameplay Trailer
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[![Game Dev Diaries Trailer](https://img.youtube.com/vi/ZYqqPR7CYrs/0.jpg)](https://www.youtube.com/watch?v=ZYqqPR7CYrs)
 
-### Markdown
+## Overview:
+Game Dev Diaries is a Life and Game Development Simulation game that is built for a UI/UX research project in school.
+This game was developed in 8 weeks with research about the simulation genre, along with interviewing people who like the simulation genre.
+The research was used to cater the game to the audience.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Here are some quick links:
 
-```markdown
-Syntax highlighted code block
+1. [Research On the Motivations of People who Play Simulation](https://1drv.ms/b/s!Ai1FM8OsG3Srgt1S1QqGQZZWwwDoPA?e=Tsq7VO)
+2. [Concept Art, Assets Used and Playtesting Documentation](https://1drv.ms/b/s!Ai1FM8OsG3Srgt1T8ty1YTWzU3uA5w?e=Fqa9KN) 
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JordynWinnie/Game-Dev-Diaries/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Platform Compatibility:
+- PC 
+- Mobile
